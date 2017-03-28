@@ -29,5 +29,11 @@ public interface UserDao extends DataDao<User> {
      */
     void removeByUsername(String username);
 
+    /**
+     * Returns all users with the input role.
+     *
+     * @param role a users role.
+     * @return The all users with the input role.
+     */
     Collection<User> getByUserRole(UserRole role);
 }

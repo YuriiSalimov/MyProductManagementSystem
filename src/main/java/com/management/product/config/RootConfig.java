@@ -24,7 +24,7 @@ import javax.sql.DataSource;
  * Class is the source of bean definitions, activates the Spring transaction
  * opportunities through @Transactional. It activates the Spring Data JPA,
  * which would create a specific implementation for the repository of
- * the package "com.salimov.ecoteh.repository" and set to interact with
+ * the package "com.management.product.repository" and set to interact with
  * the database in memory, using the JPA.
  *
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
@@ -44,7 +44,7 @@ public class RootConfig {
     private String driver;
 
     /**
-     * The url of driver for connection to the database.
+     * The URL of driver for connection to the database.
      */
     @Value("${jdbc.driver.url}")
     private String urlDriver;

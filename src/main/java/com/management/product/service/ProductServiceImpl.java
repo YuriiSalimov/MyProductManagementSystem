@@ -10,13 +10,30 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
+/**
+ * The class of the service layer, implements a set of methods
+ * for working with objects of the {@link Product} class.
+ *
+ * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
+ * @version 1.0
+ */
 @Service
 @ComponentScan(basePackages = "com.management.product.dao")
-public final class ProductServiceImpl extends DataServiceImpl<Product> implements ProductService {
+public class ProductServiceImpl extends DataServiceImpl<Product> implements ProductService {
 
+    /**
+     * The interface provides a set of standard methods
+     * for working {@link ProductDao} objects a the database.
+     */
     private final ProductDao dao;
 
+    /**
+     * Constructor.
+     *
+     * @param dao a implementation of the {@link ProductDao} interface.
+     */
     @Autowired
+    @SuppressWarnings("SpringJavaAutowiringInspection")
     public ProductServiceImpl(final ProductDao dao) {
         super(dao);
         this.dao = dao;

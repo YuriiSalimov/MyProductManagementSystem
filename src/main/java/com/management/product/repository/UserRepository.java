@@ -31,5 +31,11 @@ public interface UserRepository extends DataRepository<User> {
      */
     void deleteByUsername(String username);
 
+    /**
+     * Returns all users with the input role.
+     *
+     * @param role a users role.
+     * @return The all users with the input role.
+     */
     Collection<User> findAllByRole(UserRole role);
 }

@@ -9,14 +9,27 @@ import org.springframework.stereotype.Repository;
 import java.util.Collection;
 
 /**
+ * The class implements a set of standard methods for working {@link User}
+ * objects with a database.
+ *
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  * @version 1.0
  */
 @Repository
-public final class UserDaoImpl extends DataDaoImpl<User> implements UserDao {
+public class UserDaoImpl extends DataDaoImpl<User> implements UserDao {
 
+    /**
+     * The interface provides a set of JPA methods
+     * for working {@link User} objects with a database.
+     */
     private final UserRepository repository;
 
+    /**
+     * Constructor.
+     *
+     * @param repository a implementation of the interface provides a set of JPA methods
+     *                   for working {@link User} objects with a database.
+     */
     @Autowired
     public UserDaoImpl(final UserRepository repository) {
         super(repository);
@@ -44,6 +57,12 @@ public final class UserDaoImpl extends DataDaoImpl<User> implements UserDao {
         this.repository.deleteByUsername(username);
     }
 
+    /**
+     * Returns all users with the input role.
+     *
+     * @param role a users role.
+     * @return The all users with the input role.
+     */
     @Override
     public Collection<User> getByUserRole(UserRole role) {
         return this.repository.findAllByRole(role);

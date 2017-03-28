@@ -108,7 +108,7 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
     /**
      * Create a DispatcherServlet (or other kind of FrameworkServlet-derived
      * dispatcher) with the specified WebApplicationContext}.
-     * <p>Note: This allows for any FrameworkServlet subclass as of 4.2.3.
+     * Note: This allows for any FrameworkServlet subclass as of 4.2.3.
      * Previously, it insisted on returning a DispatcherServlet
      * or subclass thereof.
      */

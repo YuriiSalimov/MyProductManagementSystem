@@ -19,6 +19,11 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class AuthorizationController {
 
+    /**
+     * Login user.
+     *
+     * @return The ready object of class ModelAndView.
+     */
     @RequestMapping(
             value = "/login",
             method = RequestMethod.GET

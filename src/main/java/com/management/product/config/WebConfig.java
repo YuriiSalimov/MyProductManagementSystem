@@ -30,13 +30,6 @@ import org.springframework.web.servlet.view.JstlView;
 @PropertySource("classpath:content.properties")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
-    /*private final static String CONTENT_TYPE = "text/html;charset=UTF-8";
-    private final static String VIEW_PREFIX = "/WEB-INF/views/";
-    private final static String VIEW_SUFFIX = ".jsp";
-    private final static boolean IS_EXPOSE_CONTEXT_BEANS_AS_ATTRIBUTES = true;
-    private final static String RESOURCE_HANDLER = "/resources/**";
-    private final static String RESOURCE_LOCATIONS = "/resources/";*/
-
     /**
      * Content Type encoding.
      */

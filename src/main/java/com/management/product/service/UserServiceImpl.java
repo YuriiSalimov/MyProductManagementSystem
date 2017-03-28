@@ -27,8 +27,7 @@ import static org.apache.commons.lang3.StringUtils.isNotBlank;
  */
 @Service
 @ComponentScan(basePackages = "com.management.product.dao")
-public final class UserServiceImpl extends DataServiceImpl<User>
-        implements UserService, UserDetailsService {
+public class UserServiceImpl extends DataServiceImpl<User> implements UserService, UserDetailsService {
 
     /**
      * The object for logging information.
@@ -126,9 +125,9 @@ public final class UserServiceImpl extends DataServiceImpl<User>
     }
 
     /**
-     * Returns personnel.
+     * Returns users with role {@code USER}.
      *
-     * @return The all personnel.
+     * @return The users with role {@code USER}.
      */
     @Override
     @Transactional(readOnly = true)

@@ -13,19 +13,39 @@ import java.util.List;
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
 /**
+ * The class implements a set of standard methods for working
+ * with entity of the {@link User} class.
+ *
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  * @version 1.0
  */
 @Entity
 @Table(name = "users")
-public final class User extends Model implements UserDetails {
+public class User extends Model implements UserDetails {
 
+    /**
+     * It is used during deserialization to verify that
+     * the sender and receiver of a serialized object have
+     * loaded classes for that object that are compatible
+     * with respect to serialization.
+     */
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * The name of a user.
+     */
     @Column(name = "username", nullable = false)
     private String username;
 
+    /**
+     * The password of a user.
+     */
     @Column(name = "password", nullable = false)
     private String password;
 
+    /**
+     * The role of a user.
+     */
     @Column(name = "role", nullable = false)
     @Enumerated(EnumType.STRING)
     private UserRole role;
@@ -36,27 +56,53 @@ public final class User extends Model implements UserDetails {
     @Column(name = "locked")
     private boolean isLocked;
 
+    /**
+     * Default constructor.
+     */
     public User() {
         this.username = "";
         this.password = "";
         this.role = UserRole.USER;
     }
 
+    /**
+     * Constructor.
+     *
+     * @param username a name of the new user.
+     */
     public User(String username) {
         this();
         setUsername(username);
     }
 
+    /**
+     * Constructor.
+     *
+     * @param username a name of the new user.
+     * @param password a password of the new user.
+     */
     public User(String username, String password) {
         this(username);
         setPassword(password);
     }
 
+    /**
+     * Constructor.
+     *
+     * @param username a name of the new user.
+     * @param password a password of the new user.
+     * @param role     a role of the new user.
+     */
     public User(String username, String password, UserRole role) {
         this(username, password);
         setRole(role);
     }
 
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return A string representation of the object.
+     */
     @Override
     public String toString() {
         return "User{" + super.toString() +
@@ -67,6 +113,13 @@ public final class User extends Model implements UserDetails {
                 '}';
     }
 
+    /**
+     * Indicates whether some other object is "equal to" this one.
+     *
+     * @param object The reference object with which to compare.
+     * @return Returns true if this object is the same as the obj
+     * argument, otherwise returns false.
+     */
     @Override
     public boolean equals(Object object) {
         boolean result = super.equals(object);
@@ -79,6 +132,13 @@ public final class User extends Model implements UserDetails {
         return result;
     }
 
+    /**
+     * Returns a hash code value for the object.
+     * This method is supported for the benefit
+     * of hash tables such as those provided by HashMap.
+     *
+     * @return A hash code value for this object.
+     */
     @Override
     public int hashCode() {
         int result = this.username.hashCode();
@@ -148,9 +208,7 @@ public final class User extends Model implements UserDetails {
     }
 
     /**
-     * Returns the username used to authenticate the user.
-     * Cannot return {@code null}. Return the empty string
-     * if username is {@code null}.
+     * Returns the user username.
      *
      * @return the username or the empty string (never {@code null}).
      */
@@ -159,22 +217,50 @@ public final class User extends Model implements UserDetails {
         return this.username;
     }
 
+    /**
+     * Sets a new name to the user.
+     * If parameter name is blank, then sets empty string.
+     *
+     * @param username a new name to the user.
+     */
     public void setUsername(String username) {
         this.username = isNotBlank(username) ? username : "";
     }
 
+    /**
+     * Returns the user password.
+     *
+     * @return the password or the empty string (never {@code null}).
+     */
     public String getPassword() {
         return this.password;
     }
 
+    /**
+     * Sets a new password to the user.
+     * If parameter password is blank, then sets empty string.
+     *
+     * @param password a new password to the user.
+     */
     public void setPassword(String password) {
         this.password = isNotBlank(password) ? password : "";
     }
 
+    /**
+     * Returns the user role.
+     *
+     * @return the used role (never {@code null}).
+     */
     public UserRole getRole() {
         return this.role;
     }
 
+    /**
+     * Sets a new role to the user.
+     * If parameter role is {@code null}, then sets USER role.
+     *
+     * @param role a new role to the user.
+     */
     public void setRole(UserRole role) {
         this.role = (role != null) ? role : UserRole.USER;
     }

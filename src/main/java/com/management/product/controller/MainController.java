@@ -1,5 +1,7 @@
 package com.management.product.controller;
 
+import com.management.product.entity.Product;
+import com.management.product.entity.User;
 import com.management.product.service.ProductService;
 import com.management.product.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
+ * The class implements a set of methods for working
+ * with main ModelAndView object. Class methods create and return modelsAndView,
+ * depending on the request.
+ *
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  * @version 1.0
  */
@@ -19,9 +25,25 @@ import org.springframework.web.servlet.ModelAndView;
 @SuppressWarnings("SpringMVCViewInspection")
 public class MainController {
 
+    /**
+     * The implementation of the interface describes a set of methods
+     * for working with objects of the {@link Product} class.
+     */
     private final ProductService productService;
+
+    /**
+     * The implementation of the interface describes a set of methods
+     * for working with objects of the {@link User} class.
+     */
     private final UserService userService;
 
+    /**
+     * Constructor.
+     * Initializes a implementation of the service layer interface.
+     *
+     * @param productService a implementation of the {@link ProductService} interface.
+     * @param userService    a implementation of the {@link UserService} interface.
+     */
     @Autowired
     public MainController(
             final ProductService productService,
@@ -39,7 +61,7 @@ public class MainController {
      * @return The ready object of class ModelAndView.
      */
     @RequestMapping(
-            value = {"", "/", "/index", "/home"},
+            value = { "", "/", "/index", "/home" },
             method = RequestMethod.GET
     )
     public ModelAndView getIndexPage() {
@@ -50,6 +72,14 @@ public class MainController {
         return modelAndView;
     }
 
+    /**
+     * Returns modelAndView with one product.
+     * Request mapping: '/product/{product_id}
+     * Method: GET
+     *
+     * @param id a id of the product to return.
+     * @return The ready object of class ModelAndView.
+     */
     @RequestMapping(
             value = "/product/{id}",
             method = RequestMethod.GET

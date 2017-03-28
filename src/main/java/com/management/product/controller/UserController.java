@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
+ * The class implements a set of methods for working with
+ * objects of {@link User} class or subclasses for admins.
+ * Class methods create and return modelsAndView, depending on the request.
+ *
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  * @version 1.0
  */
@@ -22,13 +26,29 @@ import org.springframework.web.servlet.ModelAndView;
 @SuppressWarnings("SpringMVCViewInspection")
 public class UserController {
 
+    /**
+     * The implementation of the interface describes a set of methods
+     * for working with objects of the {@link User} class.
+     */
     private final UserService userService;
 
+    /**
+     * Constructor.
+     *
+     * @param userService a implementation of the {@link UserService} interface.
+     */
     @Autowired
     public UserController(final UserService userService) {
         this.userService = userService;
     }
 
+    /**
+     * Returns the page to add a new user.
+     * Request mapping: /admin/user/new
+     * Method: GET
+     *
+     * @return The ready object of class ModelAndView.
+     */
     @RequestMapping(
             value = "/new",
             method = RequestMethod.GET
@@ -40,6 +60,17 @@ public class UserController {
         return modelAndView;
     }
 
+    /**
+     * Adds new user and redirects by URL /home.
+     * Request mapping: /admin/user/add
+     * Method: POST
+     *
+     * @param username a name of the new user.
+     * @param password a password of the new user.
+     * @param role     a role of the new user.
+     * @param locked   a locked of the new user.
+     * @return The view name.
+     */
     @RequestMapping(
             value = "/add",
             method = RequestMethod.POST
@@ -56,6 +87,14 @@ public class UserController {
         return "redirect:/home";
     }
 
+    /**
+     * Returns the page to edit the user with id.
+     * Request mapping: /admin/user/edit/{user_id}
+     * Method: GET
+     *
+     * @param id a id of the user to edit.
+     * @return The ready object of class ModelAndView.
+     */
     @RequestMapping(
             value = "/edit/{id}",
             method = RequestMethod.GET
@@ -68,6 +107,19 @@ public class UserController {
         return modelAndView;
     }
 
+    /**
+     * Updates and save the product with url
+     * and redirects by URL /home.
+     * Request mapping: /admin/user/update
+     * Method: POST
+     *
+     * @param id       a id of the user to update.
+     * @param username a new name to the user.
+     * @param password a new password to the user.
+     * @param role     a new role to the user.
+     * @param locked   a new locked to the user.
+     * @return The view name.
+     */
     @RequestMapping(
             value = "/update/{id}",
             method = RequestMethod.POST
@@ -88,6 +140,14 @@ public class UserController {
         return "redirect:/home";
     }
 
+    /**
+     * Removes user with id and redirects by URL /home.
+     * Request mapping: /admin/user/delete/{user_id}
+     * Method: GET
+     *
+     * @param id a id of the user to remove.
+     * @return The view name.
+     */
     @RequestMapping(
             value = "/delete/{id}",
             method = RequestMethod.GET
