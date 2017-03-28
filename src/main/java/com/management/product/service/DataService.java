@@ -20,7 +20,7 @@ public interface DataService<T extends Model> {
      * @param model the model to add.
      * @return The saving model.
      */
-    T add(final T model);
+    T add(T model);
 
     /**
      * Saves and returns objects of {@link Model} class or subclasses.
@@ -28,7 +28,7 @@ public interface DataService<T extends Model> {
      * @param models the models to add.
      * @return The saving models.
      */
-    Collection<T> addAll(final Collection<T> models);
+    Collection<T> addAll(Collection<T> models);
 
     /**
      * Updates and returns object of {@link Model} class or subclasses.
@@ -36,7 +36,7 @@ public interface DataService<T extends Model> {
      * @param model a model to update.
      * @return The updating models.
      */
-    T update(final T model);
+    T update(T model);
 
     /**
      * Updates and returns objects of {@link Model} class or subclasses.
@@ -44,7 +44,7 @@ public interface DataService<T extends Model> {
      * @param models the models to update.
      * @return The updating models.
      */
-    Collection<T> update(final Collection<T> models);
+    Collection<T> update(Collection<T> models);
 
     /**
      * Returns object of {@link Model} class or subclasses with parameter id.
@@ -52,7 +52,7 @@ public interface DataService<T extends Model> {
      * @param id is id of object to return.
      * @return The object models with parameter id.
      */
-    T get(final long id);
+    T get(long id);
 
     /**
      * Returns all valid objects of {@link Model} class or subclasses.
@@ -66,21 +66,21 @@ public interface DataService<T extends Model> {
      *
      * @param id a id of the model to remove.
      */
-    void remove(final long id);
+    void remove(long id);
 
     /**
      * Removes object of {@link Model} class or subclasses.
      *
      * @param model the model to remove.
      */
-    void remove(final T model);
+    void remove(T model);
 
     /**
      * Removes objects of {@link Model} class or subclasses.
      *
      * @param models the models to remove.
      */
-    void remove(final Collection<T> models);
+    void remove(Collection<T> models);
 
     /**
      * Removes all objects of {@link Model} class or subclasses.
@@ -95,7 +95,7 @@ public interface DataService<T extends Model> {
      * @return Returns {@code true} if model is exists,
      * otherwise returns {@code false}.
      */
-    boolean exists(final long id);
+    boolean exists(long id);
 
     /**
      * Checks whether the object of {@link Model} class
@@ -105,5 +105,5 @@ public interface DataService<T extends Model> {
      * @return Returns {@code true} if model is exists,
      * otherwise returns {@code false}.
      */
-    boolean exists(final T model);
+    boolean exists(T model);
 }

@@ -106,7 +106,7 @@ public class User extends Model implements UserDetails {
     @Override
     public String toString() {
         return "User{" + super.toString() +
-                "username='" + this.username + '\'' +
+                ", username='" + this.username + '\'' +
                 ", password='" + this.password + '\'' +
                 ", role=" + this.role +
                 ", isLocked=" + this.isLocked +

@@ -103,7 +103,7 @@ public class Product extends Model {
     @Override
     public String toString() {
         return "Product{" + super.toString() +
-                "title='" + this.title + '\'' +
+                ", title='" + this.title + '\'' +
                 ", manufacturer='" + this.manufacturer + '\'' +
                 ", description='" + this.description + '\'' +
                 ", cost=" + this.cost +

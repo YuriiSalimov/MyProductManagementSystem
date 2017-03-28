@@ -21,7 +21,7 @@ public interface DataDao<T extends Model> {
      * @param model a model to add.
      * @return The saving model.
      */
-    T add(final T model);
+    T add(T model);
 
     /**
      * Saves in the database and returns model objects
@@ -30,7 +30,7 @@ public interface DataDao<T extends Model> {
      * @param models a model objects to add.
      * @return The saving model objects.
      */
-    Collection<T> addAll(final Collection<T> models);
+    Collection<T> addAll(Collection<T> models);
 
     /**
      * Updates in the database and returns model object
@@ -39,7 +39,7 @@ public interface DataDao<T extends Model> {
      * @param model a model object to update.
      * @return The updating model.
      */
-    T update(final T model);
+    T update(T model);
 
     /**
      * Returns model object of the {@link Model} class
@@ -48,7 +48,7 @@ public interface DataDao<T extends Model> {
      * @param id a id of the model object to return.
      * @return The model object with parameter id.
      */
-    T get(final long id);
+    T get(long id);
 
     /**
      * Returns all model objects of the {@link Model} class
@@ -64,7 +64,7 @@ public interface DataDao<T extends Model> {
      *
      * @param id a id model object to remove.
      */
-    void remove(final long id);
+    void remove(long id);
 
     /**
      * Removes model object of the {@link Model} class
@@ -72,7 +72,7 @@ public interface DataDao<T extends Model> {
      *
      * @param model The model object to remove.
      */
-    void remove(final T model);
+    void remove(T model);
 
     /**
      * Removes model objects of the {@link Model} class
@@ -80,7 +80,7 @@ public interface DataDao<T extends Model> {
      *
      * @param models The model objects to remove.
      */
-    void remove(final Collection<T> models);
+    void remove(Collection<T> models);
 
     /**
      * Removes all model objects of the {@link Model} class
@@ -95,5 +95,5 @@ public interface DataDao<T extends Model> {
      * @param id a id model object to exists.
      * @return {@code true} if model object is exists, {@code false} otherwise.
      */
-    boolean exists(final long id);
+    boolean exists(long id);
 }

@@ -17,12 +17,12 @@ public interface ProductDao extends DataDao<Product> {
      * @param title a title of the user to return.
      * @return The user with parameter name.
      */
-    Product getByTitle(final String title);
+    Product getByTitle(String title);
 
     /**
      * Removes product with the parameter title from a database.
      *
      * @param title a title of the user to remove.
      */
-    void removeByTitle(final String title);
+    void removeByTitle(String title);
 }
