@@ -19,7 +19,7 @@ USE `productManagementDB`;
 /*!40111 SET @OLD_SQL_NOTES = @@SQL_NOTES, SQL_NOTES = 0 */;
 
 --
--- Table structure for table `addresses`
+-- Table structure for table `products`
 --
 
 DROP TABLE IF EXISTS `products`;
@@ -38,7 +38,7 @@ CREATE TABLE `products` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `addresses`
+-- Table structure for table `users`
 --
 
 DROP TABLE IF EXISTS `users`;
