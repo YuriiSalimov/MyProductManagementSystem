@@ -8,5 +8,5 @@ INSERT INTO `products` (`id`, `title`, `manufacturer`, `description`, `cost`) VA
   (5, 'Title 5', 'manufacturer 5', 'description 5', 105);
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`, `locked`) VALUES
-  (1, 'admin', 'admin', 'ADMIN', '\0'),
-  (2, 'client', 'client', 'USER', '');
+  (1, 'admin', 'admin', 'ADMIN', FALSE),
+  (2, 'client', 'client', 'USER', TRUE);

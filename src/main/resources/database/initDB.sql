@@ -30,7 +30,7 @@ CREATE TABLE `products` (
   `title`        VARCHAR(300)     NOT NULL DEFAULT '',
   `manufacturer` VARCHAR(300)     NOT NULL DEFAULT '',
   `description`  TEXT             NOT NULL DEFAULT '',
-  `cost`         INT(10) UNSIGNED NOT NULL,
+  `cost`         INT(10) UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 )
   ENGINE = InnoDB
@@ -49,7 +49,7 @@ CREATE TABLE `users` (
   `username` VARCHAR(300)           NOT NULL DEFAULT '',
   `password` VARCHAR(300)           NOT NULL DEFAULT '',
   `role`     ENUM ('ADMIN', 'USER') NOT NULL DEFAULT 'USER',
-  `locked`      BIT(1)                                            NOT NULL DEFAULT b'0',
+  `locked`   BOOLEAN                NOT NULL DEFAULT FALSE,
   PRIMARY KEY (`id`)
 )
   ENGINE = InnoDB
