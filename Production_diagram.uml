@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.management.product.repository.DataRepository</OriginalElement>
+  <nodes>
+    <node x="3107.653409090909" y="344.0">com.management.product.entity.User</node>
+    <node x="729.75" y="1062.0">com.management.product.dao.UserDaoImpl</node>
+    <node x="1044.0" y="2007.0">com.management.product.config.SecurityInitializer</node>
+    <node x="956.9999999999999" y="598.0">com.management.product.dao.ProductDao</node>
+    <node x="440.75" y="1073.0">com.management.product.dao.ProductDaoImpl</node>
+    <node x="704.0" y="1315.0">com.management.product.controller.AdviceController</node>
+    <node x="1497.0" y="1315.0">com.management.product.config.AppInitializer</node>
+    <node x="775.0" y="2007.0">com.management.product.controller.IllegalAccessController</node>
+    <node x="341.0" y="2007.0">com.management.product.aspect.ExceptionAspectController</node>
+    <node x="2742.403409090909" y="54.5">com.management.product.entity.Model</node>
+    <node x="324.554924242424" y="132.0">com.management.product.repository.DataRepository</node>
+    <node x="2562.153409090909" y="1040.0">com.management.product.controller.ProductController</node>
+    <node x="2217.653409090909" y="554.0">com.management.product.service.UserService</node>
+    <node x="2540.653409090909" y="399.0">com.management.product.entity.Product</node>
+    <node x="1628.3200757575755" y="996.0">com.management.product.service.UserServiceImpl</node>
+    <node x="3543.403409090909" y="110.0">com.management.product.enums.UserRole</node>
+    <node x="0.0" y="598.0">com.management.product.repository.ProductRepository</node>
+    <node x="0.0" y="1315.0">com.management.product.config.RootConfig</node>
+    <node x="1933.804924242424" y="0.0">com.management.product.service.DataService</node>
+    <node x="0.0" y="2007.0">com.management.product.config.WebConfig</node>
+    <node x="1455.653409090909" y="432.0">com.management.product.service.DataServiceImpl</node>
+    <node x="1108.0" y="1315.0">com.management.product.config.SecurityConfig</node>
+    <node x="560.0" y="2007.0">com.management.product.controller.AuthorizationController</node>
+    <node x="503.0" y="487.0">com.management.product.dao.DataDaoImpl</node>
+    <node x="236.0" y="587.0">com.management.product.repository.UserRepository</node>
+    <node x="1093.8465909090905" y="22.0">com.management.product.dao.DataDao</node>
+    <node x="1387.3200757575755" y="1062.0">com.management.product.service.ProductServiceImpl</node>
+    <node x="1985.653409090909" y="598.0">com.management.product.service.ProductService</node>
+    <node x="3208.403409090909" y="1040.0">com.management.product.controller.UserController</node>
+    <node x="1192.653409090909" y="587.0">com.management.product.dao.UserDao</node>
+    <node x="2080.901515151515" y="1062.0">com.management.product.controller.MainController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.management.product.repository.ProductRepository" target="com.management.product.repository.DataRepository">
+      <point x="0.0" y="-37.0" />
+      <point x="108.0" y="324.0" />
+      <point x="343.554924242424" y="324.0" />
+      <point x="-38.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.ProductDaoImpl" target="com.management.product.dao.DataDaoImpl">
+      <point x="0.0" y="-60.0" />
+      <point x="575.25" y="976.0" />
+      <point x="611.5" y="976.0" />
+      <point x="-108.5" y="148.0" />
+    </edge>
+    <edge source="com.management.product.dao.UserDaoImpl" target="com.management.product.repository.UserRepository">
+      <point x="-90.0" y="-71.0" />
+      <point x="774.75" y="956.0" />
+      <point x="359.5" y="956.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="com.management.product.service.ProductServiceImpl" target="com.management.product.dao.ProductDao">
+      <point x="-73.66666666666674" y="-71.0" />
+      <point x="1424.153409090909" y="966.0" />
+      <point x="1116.0" y="966.0" />
+      <point x="53.0" y="37.0" />
+    </edge>
+    <edge source="com.management.product.dao.ProductDaoImpl" target="com.management.product.dao.ProductDao">
+      <point x="89.66666666666663" y="-60.0" />
+      <point x="664.9166666666665" y="966.0" />
+      <point x="1009.9999999999999" y="966.0" />
+      <point x="-53.0" y="37.0" />
+    </edge>
+    <edge source="com.management.product.dao.UserDaoImpl" target="com.management.product.dao.UserDao">
+      <point x="90.0" y="-71.0" />
+      <point x="954.75" y="976.0" />
+      <point x="1253.403409090909" y="976.0" />
+      <point x="-60.75" y="48.0" />
+    </edge>
+    <edge source="com.management.product.controller.MainController" target="com.management.product.service.UserService">
+      <point x="74.0" y="-71.0" />
+      <point x="2302.901515151515" y="976.0" />
+      <point x="2369.153409090909" y="976.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="com.management.product.service.DataServiceImpl" target="com.management.product.dao.DataDao">
+      <point x="-116.5" y="-203.0" />
+      <point x="1572.153409090909" y="324.0" />
+      <point x="1338.8465909090905" y="324.0" />
+      <point x="105.0" y="125.0" />
+    </edge>
+    <edge source="com.management.product.entity.Product" target="com.management.product.entity.Model">
+      <point x="0.0" y="-236.0" />
+      <point x="-71.75" y="92.5" />
+    </edge>
+    <edge source="com.management.product.service.ProductServiceImpl" target="com.management.product.service.DataServiceImpl">
+      <point x="0.0" y="-71.0" />
+      <point x="1497.8200757575755" y="956.0" />
+      <point x="1572.153409090909" y="956.0" />
+      <point x="-116.5" y="203.0" />
+    </edge>
+    <edge source="com.management.product.service.UserServiceImpl" target="com.management.product.service.DataServiceImpl">
+      <point x="0.0" y="-137.0" />
+      <point x="1797.8200757575755" y="956.0" />
+      <point x="1805.153409090909" y="956.0" />
+      <point x="116.5" y="203.0" />
+    </edge>
+    <edge source="com.management.product.dao.ProductDaoImpl" target="com.management.product.repository.ProductRepository">
+      <point x="-89.66666666666669" y="-60.0" />
+      <point x="485.58333333333326" y="976.0" />
+      <point x="108.0" y="976.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="com.management.product.dao.DataDaoImpl" target="com.management.product.dao.DataDao">
+      <point x="108.5" y="-148.0" />
+      <point x="828.5" y="314.0" />
+      <point x="1128.8465909090905" y="314.0" />
+      <point x="-105.0" y="125.0" />
+    </edge>
+    <edge source="com.management.product.dao.UserDaoImpl" target="com.management.product.dao.DataDaoImpl">
+      <point x="0.0" y="-71.0" />
+      <point x="864.75" y="956.0" />
+      <point x="828.5" y="956.0" />
+      <point x="108.5" y="148.0" />
+    </edge>
+    <edge source="com.management.product.service.ProductServiceImpl" target="com.management.product.service.ProductService">
+      <point x="73.66666666666674" y="-71.0" />
+      <point x="1571.4867424242425" y="966.0" />
+      <point x="2020.9867424242423" y="966.0" />
+      <point x="-70.66666666666674" y="37.0" />
+    </edge>
+    <edge source="com.management.product.controller.ProductController" target="com.management.product.service.ProductService">
+      <point x="-84.0" y="-93.0" />
+      <point x="2646.153409090909" y="966.0" />
+      <point x="2162.3200757575755" y="966.0" />
+      <point x="70.66666666666652" y="37.0" />
+    </edge>
+    <edge source="com.management.product.service.UserServiceImpl" target="com.management.product.service.UserService">
+      <point x="113.0" y="-137.0" />
+      <point x="1910.8200757575755" y="976.0" />
+      <point x="2268.153409090909" y="976.0" />
+      <point x="-101.0" y="81.0" />
+    </edge>
+    <edge source="com.management.product.entity.User" target="com.management.product.enums.UserRole">
+      <point x="161.75" y="-291.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="com.management.product.controller.UserController" target="com.management.product.entity.User">
+      <point x="74.25" y="-93.0" />
+      <point x="0.0" y="291.0" />
+    </edge>
+    <edge source="com.management.product.service.DataServiceImpl" target="com.management.product.service.DataService">
+      <point x="116.5" y="-203.0" />
+      <point x="1805.153409090909" y="324.0" />
+      <point x="1987.1382575757573" y="324.0" />
+      <point x="-106.66666666666674" y="147.0" />
+    </edge>
+    <edge source="com.management.product.service.UserServiceImpl" target="com.management.product.dao.UserDao">
+      <point x="-113.0" y="-137.0" />
+      <point x="1684.8200757575755" y="946.0" />
+      <point x="1374.903409090909" y="946.0" />
+      <point x="60.75" y="48.0" />
+    </edge>
+    <edge source="com.management.product.service.UserService" target="com.management.product.service.DataService">
+      <point x="0.0" y="-81.0" />
+      <point x="2369.153409090909" y="324.0" />
+      <point x="2200.4715909090905" y="324.0" />
+      <point x="106.66666666666652" y="147.0" />
+    </edge>
+    <edge source="com.management.product.controller.MainController" target="com.management.product.service.ProductService">
+      <point x="-74.0" y="-71.0" />
+      <point x="2154.901515151515" y="966.0" />
+      <point x="2091.653409090909" y="966.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="com.management.product.controller.ProductController" target="com.management.product.entity.Product">
+      <point x="84.0" y="-93.0" />
+      <point x="0.0" y="236.0" />
+    </edge>
+    <edge source="com.management.product.dao.ProductDao" target="com.management.product.dao.DataDao">
+      <point x="0.0" y="-37.0" />
+      <point x="1063.0" y="324.0" />
+      <point x="1198.8465909090905" y="324.0" />
+      <point x="-35.0" y="125.0" />
+    </edge>
+    <edge source="com.management.product.controller.UserController" target="com.management.product.service.UserService">
+      <point x="-74.25" y="-93.0" />
+      <point x="3282.653409090909" y="956.0" />
+      <point x="2470.153409090909" y="956.0" />
+      <point x="101.0" y="81.0" />
+    </edge>
+    <edge source="com.management.product.repository.UserRepository" target="com.management.product.repository.DataRepository">
+      <point x="0.0" y="-48.0" />
+      <point x="359.5" y="324.0" />
+      <point x="381.554924242424" y="324.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.UserDao" target="com.management.product.dao.DataDao">
+      <point x="0.0" y="-48.0" />
+      <point x="1314.153409090909" y="324.0" />
+      <point x="1268.8465909090905" y="324.0" />
+      <point x="35.0" y="125.0" />
+    </edge>
+    <edge source="com.management.product.dao.DataDaoImpl" target="com.management.product.repository.DataRepository">
+      <point x="-108.5" y="-148.0" />
+      <point x="611.5" y="324.0" />
+      <point x="419.554924242424" y="324.0" />
+      <point x="38.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.ProductService" target="com.management.product.service.DataService">
+      <point x="0.0" y="-37.0" />
+      <point x="2091.653409090909" y="324.0" />
+      <point x="2093.804924242424" y="324.0" />
+      <point x="0.0" y="147.0" />
+    </edge>
+    <edge source="com.management.product.entity.User" target="com.management.product.entity.Model">
+      <point x="-161.75" y="-291.0" />
+      <point x="3269.403409090909" y="324.0" />
+      <point x="2957.653409090909" y="324.0" />
+      <point x="71.75" y="92.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.25783348254252464" x="1877.5" y="1107.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>Production</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

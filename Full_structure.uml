@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.management.product.dao.ProductDaoImpl</OriginalElement>
+  <nodes>
+    <node x="55.0" y="975.0">org.springframework.web.context.AbstractContextLoaderInitializer</node>
+    <node x="1870.0551948051955" y="240.0">javax.persistence.MappedSuperclass</node>
+    <node x="341.5" y="1055.0">com.management.product.config.SecurityInitializer</node>
+    <node x="1639.0551948051952" y="340.0">org.springframework.security.core.userdetails.UserDetailsService</node>
+    <node x="196.5" y="895.0">org.springframework.web.WebApplicationInitializer</node>
+    <node x="1465.3551948051954" y="820.0">com.management.product.controller.IllegalAccessController</node>
+    <node x="2585.755194805195" y="460.0">org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</node>
+    <node x="1514.879626623377" y="460.0">com.management.product.service.UserService</node>
+    <node x="1119.2629599567103" y="820.0">com.management.product.service.UserServiceImpl</node>
+    <node x="2577.1546266233768" y="240.0">java.lang.Enum</node>
+    <node x="370.9968614718621" y="240.0">org.aspectj.lang.annotation.Aspect</node>
+    <node x="0.0" y="0.0">org.springframework.data.repository.Repository</node>
+    <node x="2765.6546266233768" y="240.0">org.springframework.security.config.annotation.SecurityConfigurer</node>
+    <node x="456.1055735930736" y="460.0">org.springframework.stereotype.Repository</node>
+    <node x="2316.02196969697" y="340.0">javax.persistence.Entity</node>
+    <node x="82.97026515151492" y="160.0">org.springframework.data.repository.PagingAndSortingRepository</node>
+    <node x="566.1055735930736" y="460.0">com.management.product.repository.ProductRepository</node>
+    <node x="1854.0551948051952" y="460.0">java.lang.SuppressWarnings</node>
+    <node x="1336.8990530303033" y="340.0">com.management.product.service.DataService</node>
+    <node x="1057.89724025974" y="460.0">com.management.product.service.DataServiceImpl</node>
+    <node x="2382.755194805195" y="160.0">java.io.Serializable</node>
+    <node x="2930.6546266233768" y="340.0">org.springframework.context.annotation.Configuration</node>
+    <node x="57.418073593073586" y="460.0">com.management.product.repository.UserRepository</node>
+    <node x="1381.879626623377" y="460.0">com.management.product.service.ProductService</node>
+    <node x="2136.6254599567105" y="820.0">com.management.product.controller.UserController</node>
+    <node x="1639.3551948051954" y="820.0">com.management.product.controller.MainController</node>
+    <node x="198.41666666666652" y="240.0">org.springframework.data.jpa.repository.JpaRepository</node>
+    <node x="2389.0551948051952" y="460.0">com.management.product.entity.User</node>
+    <node x="3505.130194805195" y="460.0">org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</node>
+    <node x="248.61295995671026" y="820.0">com.management.product.dao.UserDaoImpl</node>
+    <node x="718.1055735930736" y="460.0">com.management.product.dao.ProductDao</node>
+    <node x="403.11295995671026" y="820.0">com.management.product.dao.ProductDaoImpl</node>
+    <node x="2244.0551948051952" y="460.0">org.springframework.web.bind.annotation.RequestMapping</node>
+    <node x="1196.89724025974" y="460.0">com.management.product.controller.AdviceController</node>
+    <node x="3199.130194805195" y="460.0">org.springframework.context.annotation.PropertySource</node>
+    <node x="104.5" y="1215.0">com.management.product.config.AppInitializer</node>
+    <node x="1628.879626623377" y="460.0">org.springframework.stereotype.Controller</node>
+    <node x="362.4968614718621" y="340.0">com.management.product.aspect.ExceptionAspectController</node>
+    <node x="52.5" y="80.0">org.springframework.data.repository.CrudRepository</node>
+    <node x="2977.130194805195" y="460.0">org.springframework.transaction.annotation.EnableTransactionManagement</node>
+    <node x="1941.0551948051955" y="340.0">com.management.product.entity.Model</node>
+    <node x="194.91666666666652" y="340.0">com.management.product.repository.DataRepository</node>
+    <node x="110.0" y="0.0">org.springframework.data.repository.NoRepositoryBean</node>
+    <node x="1896.354626623377" y="820.0">com.management.product.controller.ProductController</node>
+    <node x="2145.872348484848" y="340.0">javax.persistence.Table</node>
+    <node x="2005.0551948051952" y="460.0">com.management.product.entity.Product</node>
+    <node x="954.6055735930736" y="460.0">org.springframework.stereotype.Service</node>
+    <node x="277.0" y="975.0">org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer</node>
+    <node x="2464.7796266233768" y="240.0">org.springframework.security.core.userdetails.UserDetails</node>
+    <node x="1092.6055735930736" y="340.0">org.springframework.web.bind.annotation.ControllerAdvice</node>
+    <node x="2588.005194805195" y="340.0">org.springframework.core.annotation.Order</node>
+    <node x="2488.005194805195" y="340.0">com.management.product.enums.UserRole</node>
+    <node x="3130.880194805195" y="820.0">com.management.product.config.RootConfig</node>
+    <node x="3563.0801948051953" y="820.0">com.management.product.config.WebConfig</node>
+    <node x="3705.130194805195" y="460.0">org.springframework.web.servlet.config.annotation.EnableWebMvc</node>
+    <node x="0.0" y="1135.0">org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer</node>
+    <node x="48.0" y="1055.0">org.springframework.web.servlet.support.AbstractDispatcherServletInitializer</node>
+    <node x="2672.005194805195" y="340.0">org.springframework.security.config.annotation.web.WebSecurityConfigurer</node>
+    <node x="2101.0551948051952" y="460.0">org.springframework.context.annotation.ComponentScan</node>
+    <node x="2617.4312499999996" y="820.0">com.management.product.config.SecurityConfig</node>
+    <node x="1286.3551948051954" y="820.0">com.management.product.controller.AuthorizationController</node>
+    <node x="259.7468614718621" y="460.0">com.management.product.dao.DataDaoImpl</node>
+    <node x="363.34212662337677" y="160.0">org.springframework.data.repository.query.QueryByExampleExecutor</node>
+    <node x="721.9240530303033" y="340.0">com.management.product.dao.DataDao</node>
+    <node x="1140.1885281385285" y="240.0">org.springframework.stereotype.Component</node>
+    <node x="919.5546266233769" y="820.0">com.management.product.service.ProductServiceImpl</node>
+    <node x="2821.130194805195" y="460.0">org.springframework.security.config.annotation.web.configuration.EnableWebSecurity</node>
+    <node x="2576.4046266233768" y="160.0">java.lang.Comparable</node>
+    <node x="835.1055735930736" y="460.0">com.management.product.dao.UserDao</node>
+    <node x="3526.130194805195" y="340.0">org.springframework.web.servlet.config.annotation.WebMvcConfigurer</node>
+    <node x="3334.130194805195" y="460.0">org.springframework.data.jpa.repository.config.EnableJpaRepositories</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.management.product.controller.IllegalAccessController" target="org.springframework.stereotype.Controller">
+      <point x="0.0" y="-15.0" />
+      <point x="1542.3551948051954" y="730.0" />
+      <point x="1654.9796266233768" y="730.0" />
+      <point x="-17.40000000000009" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.ProductServiceImpl" target="com.management.product.dao.ProductDao">
+      <point x="-54.799999999999955" y="-15.0" />
+      <point x="933.2546266233769" y="790.0" />
+      <point x="790.8555735930736" y="790.0" />
+      <point x="24.25" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.ProductDaoImpl" target="com.management.product.dao.ProductDao">
+      <point x="45.375" y="-15.0" />
+      <point x="508.98795995671026" y="790.0" />
+      <point x="742.3555735930736" y="790.0" />
+      <point x="-24.25" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.UserDaoImpl" target="com.management.product.dao.UserDao">
+      <point x="38.25" y="-15.0" />
+      <point x="337.86295995671026" y="800.0" />
+      <point x="854.6055735930736" y="800.0" />
+      <point x="-19.5" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.MainController" target="com.management.product.service.UserService">
+      <point x="-22.799999999999955" y="-15.0" />
+      <point x="1673.5551948051952" y="690.0" />
+      <point x="1561.879626623377" y="690.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.AuthorizationController" target="org.springframework.stereotype.Controller">
+      <point x="0.0" y="-15.0" />
+      <point x="1365.8551948051954" y="720.0" />
+      <point x="1637.579626623377" y="720.0" />
+      <point x="-34.799999999999955" y="15.0" />
+    </edge>
+    <edge source="com.management.product.entity.User" target="javax.persistence.Table">
+      <point x="-11.400000000000091" y="-15.0" />
+      <point x="2406.155194805195" y="400.0" />
+      <point x="2193.122348484848" y="400.0" />
+      <point x="15.75" y="15.0" />
+    </edge>
+    <edge source="com.management.product.entity.Product" target="com.management.product.entity.Model">
+      <point x="-25.333333333333258" y="-15.0" />
+      <point x="2017.7218614718622" y="440.0" />
+      <point x="1958.0551948051955" y="440.0" />
+      <point x="-17.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.data.jpa.repository.JpaRepository" target="org.springframework.data.repository.NoRepositoryBean">
+      <point x="-35.66666666666674" y="-15.0" />
+      <point x="216.24999999999977" y="220.0" />
+      <point x="35.125" y="220.0" />
+      <point x="35.125" y="60.0" />
+      <point x="132.0" y="60.0" />
+      <point x="-44.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.aspect.ExceptionAspectController" target="org.springframework.stereotype.Component">
+      <point x="43.5" y="-15.0" />
+      <point x="492.9968614718621" y="290.0" />
+      <point x="1148.3551948051954" y="290.0" />
+      <point x="-40.83333333333326" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.DataDaoImpl" target="com.management.product.dao.DataDao">
+      <point x="25.75" y="-15.0" />
+      <point x="336.9968614718621" y="440.0" />
+      <point x="731.7990530303033" y="440.0" />
+      <point x="-29.625" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.UserDaoImpl" target="com.management.product.dao.DataDaoImpl">
+      <point x="-12.75" y="-15.0" />
+      <point x="286.86295995671026" y="800.0" />
+      <point x="285.4968614718621" y="800.0" />
+      <point x="-25.75" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.WebConfig" target="org.springframework.context.annotation.Configuration">
+      <point x="0.0" y="-15.0" />
+      <point x="3610.0801948051953" y="520.0" />
+      <point x="3494.630194805195" y="520.0" />
+      <point x="3494.630194805195" y="440.0" />
+      <point x="3025.1546266233768" y="440.0" />
+      <point x="40.5" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.UserServiceImpl" target="org.springframework.context.annotation.ComponentScan">
+      <point x="49.16666666666674" y="-15.0" />
+      <point x="1227.4296266233769" y="750.0" />
+      <point x="2124.1176948051952" y="750.0" />
+      <point x="-38.4375" y="15.0" />
+    </edge>
+    <edge source="org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter" target="org.springframework.core.annotation.Order">
+      <point x="-49.75" y="-15.0" />
+      <point x="2635.505194805195" y="410.0" />
+      <point x="2620.005194805195" y="410.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.DataServiceImpl" target="com.management.product.service.DataService">
+      <point x="29.75" y="-15.0" />
+      <point x="1147.14724025974" y="410.0" />
+      <point x="1352.7323863636366" y="410.0" />
+      <point x="-31.666666666666742" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.SecurityConfig" target="org.springframework.context.annotation.Configuration">
+      <point x="-9.333333333333485" y="-15.0" />
+      <point x="2664.0979166666666" y="580.0" />
+      <point x="2488.5979166666666" y="580.0" />
+      <point x="2488.5979166666666" y="420.0" />
+      <point x="2944.1546266233768" y="420.0" />
+      <point x="-40.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.data.jpa.repository.JpaRepository" target="org.springframework.data.repository.query.QueryByExampleExecutor">
+      <point x="35.666666666666686" y="-15.0" />
+      <point x="287.58333333333326" y="220.0" />
+      <point x="447.34212662337677" y="220.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.UserServiceImpl" target="com.management.product.dao.UserDao">
+      <point x="-49.16666666666674" y="-15.0" />
+      <point x="1129.0962932900434" y="680.0" />
+      <point x="893.6055735930736" y="680.0" />
+      <point x="19.5" y="15.0" />
+    </edge>
+    <edge source="com.management.product.entity.Model" target="java.io.Serializable">
+      <point x="17.0" y="-15.0" />
+      <point x="1992.0551948051955" y="320.0" />
+      <point x="2013.5551948051955" y="320.0" />
+      <point x="2013.5551948051955" y="220.0" />
+      <point x="2398.088528138529" y="220.0" />
+      <point x="-30.666666666666515" y="15.0" />
+    </edge>
+    <edge source="org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter" target="org.springframework.web.servlet.config.annotation.WebMvcConfigurer">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.stereotype.Service" target="org.springframework.stereotype.Component">
+      <point x="0.0" y="-15.0" />
+      <point x="990.1055735930736" y="310.0" />
+      <point x="1181.021861471862" y="310.0" />
+      <point x="-8.166666666666742" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.RootConfig" target="org.springframework.context.annotation.Configuration">
+      <point x="-19.0" y="-15.0" />
+      <point x="3159.380194805195" y="560.0" />
+      <point x="2966.630194805195" y="560.0" />
+      <point x="2966.630194805195" y="440.0" />
+      <point x="2998.1546266233768" y="440.0" />
+      <point x="13.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter" target="org.springframework.security.config.annotation.web.WebSecurityConfigurer">
+      <point x="49.75" y="-15.0" />
+      <point x="2735.005194805195" y="410.0" />
+      <point x="2750.505194805195" y="410.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.ProductService" target="com.management.product.service.DataService">
+      <point x="0.0" y="-15.0" />
+      <point x="1438.379626623377" y="410.0" />
+      <point x="1384.3990530303033" y="410.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.AdviceController" target="org.springframework.web.bind.annotation.ControllerAdvice">
+      <point x="0.0" y="-15.0" />
+      <point x="1258.39724025974" y="400.0" />
+      <point x="1154.1055735930736" y="400.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.SecurityConfig" target="org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter">
+      <point x="9.333333333333485" y="-15.0" />
+      <point x="2682.7645833333336" y="800.0" />
+      <point x="2685.255194805195" y="800.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer" target="org.springframework.web.servlet.support.AbstractDispatcherServletInitializer">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.stereotype.Repository" target="org.springframework.stereotype.Component">
+      <point x="0.0" y="-15.0" />
+      <point x="501.1055735930736" y="430.0" />
+      <point x="546.9968614718621" y="430.0" />
+      <point x="546.9968614718621" y="300.0" />
+      <point x="1164.6885281385285" y="300.0" />
+      <point x="-24.5" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.RootConfig" target="org.springframework.context.annotation.ComponentScan">
+      <point x="-38.0" y="-15.0" />
+      <point x="3140.380194805195" y="570.0" />
+      <point x="2200.9926948051952" y="570.0" />
+      <point x="38.4375" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.ProductServiceImpl" target="com.management.product.service.DataServiceImpl">
+      <point x="0.0" y="-15.0" />
+      <point x="988.0546266233769" y="690.0" />
+      <point x="1087.64724025974" y="690.0" />
+      <point x="-29.75" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.UserController" target="org.springframework.context.annotation.ComponentScan">
+      <point x="9.166666666666515" y="-15.0" />
+      <point x="2200.792126623377" y="610.0" />
+      <point x="2170.2426948051952" y="610.0" />
+      <point x="7.6875" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.SecurityConfig" target="org.springframework.security.config.annotation.web.configuration.EnableWebSecurity">
+      <point x="28.0" y="-15.0" />
+      <point x="2701.4312499999996" y="770.0" />
+      <point x="2888.630194805195" y="770.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.data.repository.PagingAndSortingRepository" target="org.springframework.data.repository.NoRepositoryBean">
+      <point x="46.75" y="-15.0" />
+      <point x="223.22026515151492" y="135.0" />
+      <point x="217.75" y="135.0" />
+      <point x="217.75" y="60.0" />
+      <point x="220.0" y="60.0" />
+      <point x="44.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.SecurityConfig" target="org.springframework.security.core.userdetails.UserDetailsService">
+      <point x="-28.0" y="-15.0" />
+      <point x="2645.4312499999996" y="590.0" />
+      <point x="2378.5551948051952" y="590.0" />
+      <point x="2378.5551948051952" y="420.0" />
+      <point x="1746.5551948051952" y="420.0" />
+      <point x="43.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.enums.UserRole" target="java.lang.Enum">
+      <point x="0.0" y="-15.0" />
+      <point x="2528.005194805195" y="320.0" />
+      <point x="2609.6546266233768" y="320.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.stereotype.Controller" target="org.springframework.stereotype.Component">
+      <point x="0.0" y="-15.0" />
+      <point x="1672.379626623377" y="440.0" />
+      <point x="1790.5551948051952" y="440.0" />
+      <point x="1790.5551948051952" y="320.0" />
+      <point x="1213.6885281385285" y="320.0" />
+      <point x="24.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.security.core.userdetails.UserDetails" target="java.io.Serializable">
+      <point x="0.0" y="-15.0" />
+      <point x="2510.7796266233768" y="220.0" />
+      <point x="2428.755194805195" y="220.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.UserController" target="com.management.product.entity.User">
+      <point x="45.833333333333485" y="-15.0" />
+      <point x="2237.458793290044" y="800.0" />
+      <point x="2417.5551948051952" y="800.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.web.bind.annotation.ControllerAdvice" target="org.springframework.stereotype.Component">
+      <point x="0.0" y="-15.0" />
+      <point x="1154.1055735930736" y="320.0" />
+      <point x="1197.3551948051954" y="320.0" />
+      <point x="8.166666666666742" y="15.0" />
+    </edge>
+    <edge source="com.management.product.repository.DataRepository" target="org.springframework.data.jpa.repository.JpaRepository">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.UserService" target="com.management.product.service.DataService">
+      <point x="-23.5" y="-15.0" />
+      <point x="1538.379626623377" y="400.0" />
+      <point x="1416.06571969697" y="400.0" />
+      <point x="31.666666666666742" y="15.0" />
+    </edge>
+    <edge source="com.management.product.repository.UserRepository" target="com.management.product.repository.DataRepository">
+      <point x="0.0" y="-15.0" />
+      <point x="113.91807359307359" y="440.0" />
+      <point x="213.91666666666652" y="440.0" />
+      <point x="-38.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.ProductController" target="org.springframework.context.annotation.ComponentScan">
+      <point x="32.25" y="-15.0" />
+      <point x="1993.104626623377" y="770.0" />
+      <point x="2154.8676948051952" y="770.0" />
+      <point x="-7.6875" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.MainController" target="org.springframework.context.annotation.ComponentScan">
+      <point x="45.59999999999991" y="-15.0" />
+      <point x="1741.9551948051953" y="760.0" />
+      <point x="2139.4926948051952" y="760.0" />
+      <point x="-23.0625" y="15.0" />
+    </edge>
+    <edge source="org.springframework.context.annotation.Configuration" target="org.springframework.stereotype.Component">
+      <point x="0.0" y="-15.0" />
+      <point x="2984.6546266233768" y="310.0" />
+      <point x="1230.021861471862" y="310.0" />
+      <point x="40.83333333333326" y="15.0" />
+    </edge>
+    <edge source="org.springframework.security.config.annotation.web.WebSecurityConfigurer" target="org.springframework.security.config.annotation.SecurityConfigurer">
+      <point x="0.0" y="-15.0" />
+      <point x="2750.505194805195" y="320.0" />
+      <point x="2832.1546266233768" y="320.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.WebConfig" target="org.springframework.web.servlet.config.annotation.EnableWebMvc">
+      <point x="37.59999999999991" y="-15.0" />
+      <point x="3647.6801948051952" y="800.0" />
+      <point x="3763.130194805195" y="800.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.ProductDaoImpl" target="org.springframework.stereotype.Repository">
+      <point x="-15.125" y="-15.0" />
+      <point x="448.48795995671026" y="770.0" />
+      <point x="523.6055735930736" y="770.0" />
+      <point x="22.5" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.UserServiceImpl" target="org.springframework.security.core.userdetails.UserDetailsService">
+      <point x="9.833333333333258" y="-15.0" />
+      <point x="1188.0962932900434" y="690.0" />
+      <point x="1330.39724025974" y="690.0" />
+      <point x="1330.39724025974" y="420.0" />
+      <point x="1660.5551948051952" y="420.0" />
+      <point x="-43.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.RootConfig" target="org.springframework.context.annotation.PropertySource">
+      <point x="19.0" y="-15.0" />
+      <point x="3197.380194805195" y="790.0" />
+      <point x="3256.630194805195" y="790.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.data.repository.CrudRepository" target="org.springframework.data.repository.NoRepositoryBean">
+      <point x="29.0" y="-15.0" />
+      <point x="139.5" y="60.0" />
+      <point x="176.0" y="60.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.ProductServiceImpl" target="org.springframework.context.annotation.ComponentScan">
+      <point x="54.799999999999955" y="-15.0" />
+      <point x="1042.8546266233768" y="740.0" />
+      <point x="2108.7426948051952" y="740.0" />
+      <point x="-53.8125" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.ProductDaoImpl" target="com.management.product.dao.DataDaoImpl">
+      <point x="-45.375" y="-15.0" />
+      <point x="418.23795995671026" y="750.0" />
+      <point x="336.9968614718621" y="750.0" />
+      <point x="25.75" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.SecurityConfig" target="org.springframework.context.annotation.PropertySource">
+      <point x="46.666666666666515" y="-15.0" />
+      <point x="2720.0979166666666" y="780.0" />
+      <point x="3218.296861471862" y="780.0" />
+      <point x="-38.333333333333485" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.UserDaoImpl" target="com.management.product.repository.UserRepository">
+      <point x="-38.25" y="-15.0" />
+      <point x="261.36295995671026" y="800.0" />
+      <point x="113.91807359307359" y="800.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.UserService" target="org.springframework.security.core.userdetails.UserDetailsService">
+      <point x="23.5" y="-15.0" />
+      <point x="1585.379626623377" y="430.0" />
+      <point x="1703.5551948051952" y="430.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.entity.Product" target="javax.persistence.Table">
+      <point x="0.0" y="-15.0" />
+      <point x="2043.0551948051952" y="430.0" />
+      <point x="2161.622348484848" y="430.0" />
+      <point x="-15.75" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.UserServiceImpl" target="com.management.product.service.DataServiceImpl">
+      <point x="-9.833333333333258" y="-15.0" />
+      <point x="1168.4296266233769" y="660.0" />
+      <point x="1147.14724025974" y="660.0" />
+      <point x="29.75" y="15.0" />
+    </edge>
+    <edge source="com.management.product.entity.User" target="org.springframework.security.core.userdetails.UserDetails">
+      <point x="11.400000000000091" y="-15.0" />
+      <point x="2428.755194805195" y="320.0" />
+      <point x="2510.7796266233768" y="320.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.data.repository.PagingAndSortingRepository" target="org.springframework.data.repository.CrudRepository">
+      <point x="-46.75" y="-15.0" />
+      <point x="129.72026515151492" y="135.0" />
+      <point x="110.5" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.ProductDaoImpl" target="com.management.product.repository.ProductRepository">
+      <point x="15.125" y="-15.0" />
+      <point x="478.73795995671026" y="780.0" />
+      <point x="632.1055735930736" y="780.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.SecurityConfig" target="org.springframework.context.annotation.ComponentScan">
+      <point x="-46.666666666666515" y="-15.0" />
+      <point x="2626.7645833333336" y="600.0" />
+      <point x="2185.6176948051952" y="600.0" />
+      <point x="23.0625" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.UserServiceImpl" target="org.springframework.stereotype.Service">
+      <point x="-29.5" y="-15.0" />
+      <point x="1148.7629599567103" y="670.0" />
+      <point x="1007.8555735930736" y="670.0" />
+      <point x="17.75" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.ProductServiceImpl" target="com.management.product.service.ProductService">
+      <point x="27.399999999999977" y="-15.0" />
+      <point x="1015.4546266233768" y="700.0" />
+      <point x="1400.7129599567102" y="700.0" />
+      <point x="-37.66666666666674" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.SecurityInitializer" target="org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.entity.User" target="javax.persistence.Entity">
+      <point x="0.0" y="-15.0" />
+      <point x="2417.5551948051952" y="390.0" />
+      <point x="2364.02196969697" y="390.0" />
+      <point x="16.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.UserServiceImpl" target="com.management.product.service.UserService">
+      <point x="29.5" y="-15.0" />
+      <point x="1207.7629599567103" y="710.0" />
+      <point x="1530.5462932900436" y="710.0" />
+      <point x="-31.333333333333258" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.RootConfig" target="org.springframework.transaction.annotation.EnableTransactionManagement">
+      <point x="0.0" y="-15.0" />
+      <point x="3178.380194805195" y="550.0" />
+      <point x="3078.130194805195" y="550.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.WebConfig" target="org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter">
+      <point x="18.800000000000182" y="-15.0" />
+      <point x="3628.8801948051955" y="510.0" />
+      <point x="3595.130194805195" y="510.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.entity.User" target="com.management.product.enums.UserRole">
+      <point x="22.800000000000182" y="-15.0" />
+      <point x="2440.3551948051954" y="410.0" />
+      <point x="2528.005194805195" y="410.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.lang.Comparable">
+      <point x="16.25" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.UserController" target="org.springframework.stereotype.Controller">
+      <point x="-27.5" y="-15.0" />
+      <point x="2164.1254599567105" y="630.0" />
+      <point x="1707.1796266233769" y="630.0" />
+      <point x="34.799999999999955" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.MainController" target="com.management.product.service.ProductService">
+      <point x="-45.59999999999991" y="-15.0" />
+      <point x="1650.7551948051955" y="700.0" />
+      <point x="1438.379626623377" y="700.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.UserController" target="com.management.product.service.UserService">
+      <point x="-45.833333333333485" y="-15.0" />
+      <point x="2145.792126623377" y="640.0" />
+      <point x="1593.2129599567102" y="640.0" />
+      <point x="31.333333333333258" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.ProductDao" target="com.management.product.dao.DataDao">
+      <point x="0.0" y="-15.0" />
+      <point x="766.6055735930736" y="440.0" />
+      <point x="751.5490530303033" y="440.0" />
+      <point x="-9.875" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.UserDao" target="com.management.product.dao.DataDao">
+      <point x="0.0" y="-15.0" />
+      <point x="874.1055735930736" y="430.0" />
+      <point x="771.2990530303033" y="430.0" />
+      <point x="9.875" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.ProductController" target="java.lang.SuppressWarnings">
+      <point x="-10.75" y="-15.0" />
+      <point x="1950.104626623377" y="650.0" />
+      <point x="1919.5551948051952" y="650.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.entity.User" target="com.management.product.entity.Model">
+      <point x="-22.800000000000182" y="-15.0" />
+      <point x="2394.755194805195" y="410.0" />
+      <point x="1992.0551948051955" y="410.0" />
+      <point x="17.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.repository.ProductRepository" target="com.management.product.repository.DataRepository">
+      <point x="0.0" y="-15.0" />
+      <point x="632.1055735930736" y="420.0" />
+      <point x="289.9166666666665" y="420.0" />
+      <point x="38.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer" target="org.springframework.web.WebApplicationInitializer">
+      <point x="0.0" y="-15.0" />
+      <point x="403.0" y="950.0" />
+      <point x="321.0" y="950.0" />
+      <point x="41.5" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.UserController" target="java.lang.SuppressWarnings">
+      <point x="-9.166666666666515" y="-15.0" />
+      <point x="2182.458793290044" y="620.0" />
+      <point x="1963.2218614718622" y="620.0" />
+      <point x="43.66666666666674" y="15.0" />
+    </edge>
+    <edge source="org.springframework.data.repository.CrudRepository" target="org.springframework.data.repository.Repository">
+      <point x="-29.0" y="-15.0" />
+      <point x="81.5" y="50.0" />
+      <point x="45.0" y="50.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.web.servlet.support.AbstractDispatcherServletInitializer" target="org.springframework.web.context.AbstractContextLoaderInitializer">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.UserDaoImpl" target="org.springframework.stereotype.Repository">
+      <point x="12.75" y="-15.0" />
+      <point x="312.36295995671026" y="760.0" />
+      <point x="478.6055735930736" y="760.0" />
+      <point x="-22.5" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.MainController" target="java.lang.SuppressWarnings">
+      <point x="22.799999999999955" y="-15.0" />
+      <point x="1719.1551948051952" y="730.0" />
+      <point x="1875.8885281385287" y="730.0" />
+      <point x="-43.66666666666674" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.ProductController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="53.75" y="-15.0" />
+      <point x="2014.604626623377" y="780.0" />
+      <point x="2275.0551948051952" y="780.0" />
+      <point x="-31.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.DataServiceImpl" target="com.management.product.dao.DataDao">
+      <point x="-29.75" y="-15.0" />
+      <point x="1087.64724025974" y="420.0" />
+      <point x="791.0490530303033" y="420.0" />
+      <point x="29.625" y="15.0" />
+    </edge>
+    <edge source="com.management.product.entity.Product" target="javax.persistence.Entity">
+      <point x="25.333333333333485" y="-15.0" />
+      <point x="2068.3885281385287" y="440.0" />
+      <point x="2332.02196969697" y="440.0" />
+      <point x="-16.0" y="15.0" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.io.Serializable">
+      <point x="-16.25" y="-15.0" />
+      <point x="2593.4046266233768" y="210.0" />
+      <point x="2459.421861471862" y="210.0" />
+      <point x="30.666666666666515" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.WebConfig" target="org.springframework.context.annotation.PropertySource">
+      <point x="-18.800000000000182" y="-15.0" />
+      <point x="3591.280194805195" y="530.0" />
+      <point x="3294.963528138529" y="530.0" />
+      <point x="38.333333333333485" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.ProductController" target="com.management.product.service.ProductService">
+      <point x="-53.75" y="-15.0" />
+      <point x="1907.104626623377" y="670.0" />
+      <point x="1476.0462932900436" y="670.0" />
+      <point x="37.66666666666674" y="15.0" />
+    </edge>
+    <edge source="org.springframework.security.config.annotation.web.configuration.EnableWebSecurity" target="org.springframework.context.annotation.Configuration">
+      <point x="0.0" y="-15.0" />
+      <point x="2888.630194805195" y="430.0" />
+      <point x="2971.1546266233768" y="430.0" />
+      <point x="-13.5" y="15.0" />
+    </edge>
+    <edge source="com.management.product.aspect.ExceptionAspectController" target="org.aspectj.lang.annotation.Aspect">
+      <point x="-43.5" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.MainController" target="org.springframework.stereotype.Controller">
+      <point x="0.0" y="-15.0" />
+      <point x="1696.3551948051954" y="680.0" />
+      <point x="1672.379626623377" y="680.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.AppInitializer" target="org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.service.ProductServiceImpl" target="org.springframework.stereotype.Service">
+      <point x="-27.399999999999977" y="-15.0" />
+      <point x="960.6546266233769" y="800.0" />
+      <point x="972.3555735930736" y="800.0" />
+      <point x="-17.75" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.ProductController" target="com.management.product.entity.Product">
+      <point x="10.75" y="-15.0" />
+      <point x="1971.604626623377" y="730.0" />
+      <point x="2043.0551948051952" y="730.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.WebConfig" target="org.springframework.context.annotation.ComponentScan">
+      <point x="-37.59999999999991" y="-15.0" />
+      <point x="3572.4801948051954" y="540.0" />
+      <point x="2216.3676948051952" y="540.0" />
+      <point x="53.8125" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.ProductController" target="org.springframework.stereotype.Controller">
+      <point x="-32.25" y="-15.0" />
+      <point x="1928.604626623377" y="660.0" />
+      <point x="1689.779626623377" y="660.0" />
+      <point x="17.40000000000009" y="15.0" />
+    </edge>
+    <edge source="org.springframework.web.context.AbstractContextLoaderInitializer" target="org.springframework.web.WebApplicationInitializer">
+      <point x="0.0" y="-15.0" />
+      <point x="156.0" y="950.0" />
+      <point x="238.0" y="950.0" />
+      <point x="-41.5" y="15.0" />
+    </edge>
+    <edge source="com.management.product.entity.Model" target="javax.persistence.MappedSuperclass">
+      <point x="-17.0" y="-15.0" />
+      <point x="1958.0551948051955" y="320.0" />
+      <point x="1936.5551948051955" y="320.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.config.RootConfig" target="org.springframework.data.jpa.repository.config.EnableJpaRepositories">
+      <point x="38.0" y="-15.0" />
+      <point x="3216.380194805195" y="800.0" />
+      <point x="3409.130194805195" y="800.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.controller.UserController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="27.5" y="-15.0" />
+      <point x="2219.1254599567105" y="790.0" />
+      <point x="2337.0551948051952" y="790.0" />
+      <point x="31.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.data.jpa.repository.JpaRepository" target="org.springframework.data.repository.PagingAndSortingRepository">
+      <point x="0.0" y="-15.0" />
+      <point x="251.91666666666652" y="210.0" />
+      <point x="176.47026515151492" y="210.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.management.product.dao.DataDaoImpl" target="com.management.product.repository.DataRepository">
+      <point x="-25.75" y="-15.0" />
+      <point x="285.4968614718621" y="440.0" />
+      <point x="251.91666666666652" y="440.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.25455491931285784" x="1911.0000000000002" y="622.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
