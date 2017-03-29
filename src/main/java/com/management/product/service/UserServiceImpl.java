@@ -62,6 +62,16 @@ public class UserServiceImpl extends DataServiceImpl<User> implements UserServic
     }
 
     /**
+     *
+     * @return
+     */
+    @Override
+    @Transactional(readOnly = true)
+    public boolean isAuthenticatedAdmin() {
+        return getAuthenticatedUser().getRole().equals(UserRole.ADMIN);
+    }
+
+    /**
      * Locates the user based on the username.
      *
      * @param username The username identifying the user whose data is required.

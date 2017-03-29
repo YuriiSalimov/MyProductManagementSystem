@@ -2,7 +2,6 @@ package com.management.product.controller;
 
 import com.management.product.entity.Product;
 import com.management.product.entity.User;
-import com.management.product.enums.UserRole;
 import com.management.product.service.ProductService;
 import com.management.product.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,17 +60,13 @@ public class MainController {
      * @return The ready object of class ModelAndView.
      */
     @RequestMapping(
-            value = {"", "/", "/index", "/home"},
+            value = { "", "/", "/index", "/home" },
             method = RequestMethod.GET
     )
     public ModelAndView getIndexPage() {
         final ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("products", this.productService.getAll());
-        modelAndView.addObject(
-                "is_admin",
-                this.userService.getAuthenticatedUser()
-                        .getRole().equals(UserRole.ADMIN)
-        );
+        modelAndView.addObject("is_admin", this.userService.isAuthenticatedAdmin());
         modelAndView.setViewName("index");
         return modelAndView;
     }
@@ -90,11 +85,7 @@ public class MainController {
     public ModelAndView getUsersPage() {
         final ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("users", this.userService.getAll());
-        modelAndView.addObject(
-                "is_admin",
-                this.userService.getAuthenticatedUser()
-                        .getRole().equals(UserRole.ADMIN)
-        );
+        modelAndView.addObject("is_admin", this.userService.isAuthenticatedAdmin());
         modelAndView.setViewName("users");
         return modelAndView;
     }
@@ -114,11 +105,7 @@ public class MainController {
     public ModelAndView getProductPage(@PathVariable("id") final long id) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("product", this.productService.get(id));
-        modelAndView.addObject(
-                "is_admin",
-                this.userService.getAuthenticatedUser()
-                        .getRole().equals(UserRole.ADMIN)
-        );
+        modelAndView.addObject("is_admin", this.userService.isAuthenticatedAdmin());
         modelAndView.setViewName("product");
         return modelAndView;
     }

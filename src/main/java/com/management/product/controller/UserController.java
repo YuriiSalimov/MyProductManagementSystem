@@ -84,7 +84,7 @@ public class UserController {
         User user = new User(username, password, role);
         user.setLocked(locked);
         this.userService.add(user);
-        return "redirect:/home";
+        return "redirect:/users";
     }
 
     /**
@@ -138,7 +138,7 @@ public class UserController {
         user.setRole(role);
         user.setLocked(locked);
         this.userService.update(user);
-        return "redirect:/home";
+        return "redirect:/users";
     }
 
     /**
@@ -155,7 +155,7 @@ public class UserController {
     )
     public String deleteUser(@PathVariable("id") final long id) {
         this.userService.remove(id);
-        return "redirect:/home";
+        return "redirect:/users";
     }
 
     /**
@@ -171,6 +171,6 @@ public class UserController {
     )
     public String deleteAllUsers() {
         this.userService.removeAll();
-        return "redirect:/home";
+        return "redirect:/users";
     }
 }

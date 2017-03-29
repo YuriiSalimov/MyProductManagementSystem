@@ -31,6 +31,12 @@ public interface UserService extends DataService<User>, UserDetailsService {
     User getAuthenticatedUser();
 
     /**
+     *
+     * @return
+     */
+    boolean isAuthenticatedAdmin();
+
+    /**
      * Returns users with role "ADMIN".
      *
      * @return The all admin.

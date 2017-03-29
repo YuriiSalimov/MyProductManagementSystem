@@ -80,8 +80,8 @@ public class ProductController {
             @RequestParam(value = "cost", defaultValue = "0") final int cost
     ) {
         Product product = new Product(title, manufacturer, description, cost);
-        this.productService.add(product);
-        return "redirect:/home";
+        product = this.productService.add(product);
+        return "redirect:/product/" + product.getId();
     }
 
     /**
@@ -133,8 +133,8 @@ public class ProductController {
         product.setManufacturer(manufacturer);
         product.setDescription(description);
         product.setCost(cost);
-        this.productService.update(product);
-        return "redirect:/home";
+        product = this.productService.update(product);
+        return "redirect:/product/" + product.getId();
     }
 
     /**

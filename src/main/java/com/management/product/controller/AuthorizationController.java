@@ -5,7 +5,6 @@ import org.springframework.security.web.authentication.logout.SecurityContextLog
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -35,7 +34,6 @@ public class AuthorizationController {
     /**
      * Logout user and redirects to /login?logout.
      *
-     * @param modelAndView a object of class ModelAndView for to update.
      * @param request      a implementation of the interface to provide
      *                     request information for HTTP servlets.
      * @param response     a implementation of the interface to provide
@@ -46,8 +44,7 @@ public class AuthorizationController {
             value = "/logout",
             method = RequestMethod.GET
     )
-    public ModelAndView logoutPage(
-            final ModelAndView modelAndView,
+    public String logoutPage(
             final HttpServletRequest request,
             final HttpServletResponse response
     ) {
@@ -55,7 +52,6 @@ public class AuthorizationController {
                 request, response,
                 SecurityContextHolder.getContext().getAuthentication()
         );
-        modelAndView.setViewName("redirect:/login?logout");
-        return modelAndView;
+        return "redirect:/login?logout";
     }
 }
