@@ -77,8 +77,11 @@ public class MainController {
     }
 
     /**
+     * Returns modelAndView with all users.
+     * Request mapping: '/users
+     * Method: GET
      *
-     * @return
+     * @return The ready object of class ModelAndView.
      */
     @RequestMapping(
             value = "/users",
