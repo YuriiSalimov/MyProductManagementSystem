@@ -5,7 +5,6 @@ import com.management.product.enums.UserRole;
 import com.management.product.repository.UserRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -26,7 +25,6 @@ import static org.apache.commons.lang3.StringUtils.isNotBlank;
  * @version 1.0
  */
 @Service
-@ComponentScan(basePackages = "com.management.product.dao")
 public class UserServiceImpl extends DataServiceImpl<User> implements UserService, UserDetailsService {
 
     /**
@@ -60,15 +58,8 @@ public class UserServiceImpl extends DataServiceImpl<User> implements UserServic
     @Override
     @Transactional(readOnly = true)
     public User getAuthenticatedUser() {
-        User authenticatedUser;
-        try {
-            authenticatedUser = (User) SecurityContextHolder.getContext()
-                    .getAuthentication().getPrincipal();
-        } catch (ClassCastException ex) {
-            LOGGER.error(ex.getMessage(), ex);
-            authenticatedUser = null;
-        }
-        return authenticatedUser;
+        return (User) SecurityContextHolder.getContext()
+                .getAuthentication().getPrincipal();
     }
 
     /**
