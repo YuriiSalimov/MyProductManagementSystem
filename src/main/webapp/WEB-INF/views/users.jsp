@@ -10,38 +10,32 @@
 <body>
 <jsp:include page="/WEB-INF/views/navbar.jsp"/>
 <div class="container">
-    <h4>Products</h4>
+    <h4>Users</h4>
     <c:if test="${is_admin}">
-        <a href="<c:url value="/admin/product/new"/>">
+        <a href="<c:url value="/admin/user/new"/>">
             <input type="submit" class="btn btn-default" value="Add New">
         </a>
-        <a href="<c:url value="/admin/product/delete/all"/>">
+        <a href="<c:url value="/admin/user/delete/all"/>">
             <input type="submit" class="btn btn-default" value="Delete All">
         </a>
     </c:if>
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>Title</th>
-            <th>Manufacturer</th>
-            <th>Cost</th>
+            <th>Username</th>
+            <th>Role</th>
         </tr>
         </thead>
-        <c:forEach items="${products}" var="product">
+        <c:forEach items="${users}" var="user">
             <tr>
-                <td>
-                    <a href="<c:url value="/product/${product.id}"/>">
-                        <c:out value="${product.title}"/>
-                    </a>
-                </td>
-                <td><c:out value="${product.manufacturer}"/></td>
-                <td><c:out value="${product.cost}"/></td>
+                <td><c:out value="${user.username}"/></td>
+                <td><c:out value="${user.role}"/></td>
                 <c:if test="${is_admin}">
                     <td>
-                        <a href="<c:url value="/admin/product/delete/${product.id}"/>">
+                        <a href="<c:url value="/admin/user/delete/${user.id}"/>">
                             <input type="submit" class="btn btn-default" value="Delete">
                         </a>
-                        <a href="<c:url value="/admin/product/edit/${product.id}"/>">
+                        <a href="<c:url value="/admin/user/edit/${user.id}"/>">
                             <input type="submit" class="btn btn-default" value="Edit">
                         </a>
                     </td>

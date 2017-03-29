@@ -5,17 +5,15 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Error</title>
+    <title>Error <c:out value="${status}"/></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
 <body>
+<jsp:include page="/WEB-INF/views/navbar.jsp"/>
 <div class="container">
-    <h3>
-        <a href="<c:url value="/home"/>">Product Management System</a> - <b>Error <c:out value="${status}"/></b>
-    </h3>
-    <h4><c:out value="${message}"/></h4>
+    <h4><b>Error <c:out value="${status}"/></b></h4>
+    <h5><c:out value="${message}"/></h5>
 </div>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
 

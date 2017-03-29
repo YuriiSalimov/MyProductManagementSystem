@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
 <body>
+<jsp:include page="/WEB-INF/views/navbar.jsp"/>
 <div class="container">
-    <h3>
-        <a href="<c:url value="/home"/>">Product Management System</a> - Edit User <c:out value="${user.username}"/>
-    </h3>
     <form role="form" class="form-horizontal" action="<c:url value="/admin/user/update/${user.id}"/>"
           method="post">
         <div class="form-group">
@@ -46,7 +44,6 @@
         </div>
     </form>
 </div>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
 

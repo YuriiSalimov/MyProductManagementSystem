@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
 <body>
+<jsp:include page="/WEB-INF/views/navbar.jsp"/>
 <div class="container">
-    <h3>
-        <a href="<c:url value="/home"/>">Product Management System</a> - <c:out value="${product.title}"/>
-    </h3>
     <table class="table table-striped">
         <tr>
             <th>Title</th>
@@ -30,14 +28,15 @@
             <td><c:out value="${product.cost}"/></td>
         </tr>
     </table>
-    <a href="<c:url value="/admin/product/delete/${product.id}"/>">
-        <input type="submit" class="btn btn-default" value="Delete">
-    </a>
-    <a href="<c:url value="/admin/product/edit/${product.id}"/>">
-        <input type="submit" class="btn btn-default" value="Edit">
-    </a>
+    <c:if test="${is_admin}">
+        <a href="<c:url value="/admin/product/delete/${product.id}"/>">
+            <input type="submit" class="btn btn-default" value="Delete">
+        </a>
+        <a href="<c:url value="/admin/product/edit/${product.id}"/>">
+            <input type="submit" class="btn btn-default" value="Edit">
+        </a>
+    </c:if>
 </div>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
 

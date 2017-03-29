@@ -9,16 +9,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
 <body>
+<jsp:include page="/WEB-INF/views/navbar.jsp"/>
 <div class="container">
-    <h3>
-        <a href="<c:url value="/home"/>">Product Management System</a> - Login
-    </h3>
+    <h4>Login</h4>
     <c:choose>
         <c:when test="${param.error ne null}">
-            <div role="alert"><h4>Error</h4></div>
+            <div role="alert"><h5>Error</h5></div>
         </c:when>
         <c:when test="${param.logout ne null}">
-            <div role="alert"><h4>Logout</h4></div>
+            <div role="alert"><h5>Logout</h5></div>
         </c:when>
     </c:choose>
     <form action="<c:url value="/login"/>" method="post">
@@ -35,7 +34,6 @@
         </div>
     </form>
 </div>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
 

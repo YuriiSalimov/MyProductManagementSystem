@@ -10,10 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
 <body>
+<jsp:include page="/WEB-INF/views/navbar.jsp"/>
 <div class="container">
-    <h3>
-        <a href="<c:url value="/home"/>">Product Management System</a> - New User
-    </h3>
     <form role="form" class="form-horizontal" action="<c:url value="/admin/user/add"/>" method="post">
         <div class="form-group">
             <input type="text" class="form-control" name="username" placeholder="Username">
@@ -43,7 +41,6 @@
     </form>
 </div>
 </body>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </html>
 
 <%-- Yurii Salimov (yuriy.alex.salimov@gmail.com) --%>
