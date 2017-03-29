@@ -22,7 +22,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping(value = "/admin/product")
 @ComponentScan(basePackages = "com.management.product.service")
-@SuppressWarnings("SpringMVCViewInspection")
 public class ProductController {
 
     /**
@@ -52,8 +51,11 @@ public class ProductController {
             value = "/new",
             method = RequestMethod.GET
     )
-    public String getNewProductPage() {
-        return "add_product";
+    public ModelAndView getNewProductPage() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("is_admin", true);
+        modelAndView.setViewName("add_product");
+        return modelAndView;
     }
 
     /**
@@ -97,6 +99,7 @@ public class ProductController {
     public ModelAndView getPageForUpdatingProduct(@PathVariable("id") final long id) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("product", this.productService.get(id));
+        modelAndView.addObject("is_admin", true);
         modelAndView.setViewName("edit_product");
         return modelAndView;
     }
@@ -148,6 +151,22 @@ public class ProductController {
     )
     public String deleteProduct(@PathVariable("id") final long id) {
         this.productService.remove(id);
+        return "redirect:/home";
+    }
+
+    /**
+     * Removes all products.
+     * Request mapping: /admin/product/delete/all
+     * Method: GET
+     *
+     * @return The view name.
+     */
+    @RequestMapping(
+            value = "/delete/all",
+            method = RequestMethod.GET
+    )
+    public String deleteAllProducts() {
+        this.productService.removeAll();
         return "redirect:/home";
     }
 }

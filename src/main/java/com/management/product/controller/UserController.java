@@ -23,7 +23,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping(value = "/admin/user")
 @ComponentScan(basePackages = "com.management.product.service")
-@SuppressWarnings("SpringMVCViewInspection")
 public class UserController {
 
     /**
@@ -56,6 +55,7 @@ public class UserController {
     public ModelAndView getNewUserPage() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("roles", UserRole.values());
+        modelAndView.addObject("is_admin", true);
         modelAndView.setViewName("add_user");
         return modelAndView;
     }
@@ -103,6 +103,7 @@ public class UserController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("user", this.userService.get(id));
         modelAndView.addObject("roles", UserRole.values());
+        modelAndView.addObject("is_admin", true);
         modelAndView.setViewName("edit_user");
         return modelAndView;
     }
@@ -154,6 +155,22 @@ public class UserController {
     )
     public String deleteUser(@PathVariable("id") final long id) {
         this.userService.remove(id);
+        return "redirect:/home";
+    }
+
+    /**
+     * Removes all users.
+     * Request mapping: /admin/user/delete/all
+     * Method: GET
+     *
+     * @return The view name.
+     */
+    @RequestMapping(
+            value = "/delete/all",
+            method = RequestMethod.GET
+    )
+    public String deleteAllUsers() {
+        this.userService.removeAll();
         return "redirect:/home";
     }
 }

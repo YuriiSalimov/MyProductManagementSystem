@@ -3,7 +3,6 @@ package com.management.product.service;
 import com.management.product.entity.User;
 import com.management.product.enums.UserRole;
 import com.management.product.repository.UserRepository;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -28,11 +27,6 @@ import static org.apache.commons.lang3.StringUtils.isNotBlank;
 public class UserServiceImpl extends DataServiceImpl<User> implements UserService, UserDetailsService {
 
     /**
-     * The object for logging information.
-     */
-    private final static Logger LOGGER = Logger.getLogger(UserServiceImpl.class);
-
-    /**
      * The interface provides a set of standard methods for working
      * {@link User} objects with the database.
      */
@@ -44,7 +38,6 @@ public class UserServiceImpl extends DataServiceImpl<User> implements UserServic
      * @param repository a implementation of the {@link UserRepository} interface.
      */
     @Autowired
-    @SuppressWarnings("SpringJavaAutowiringInspection")
     public UserServiceImpl(final UserRepository repository) {
         super(repository);
         this.repository = repository;
@@ -58,8 +51,14 @@ public class UserServiceImpl extends DataServiceImpl<User> implements UserServic
     @Override
     @Transactional(readOnly = true)
     public User getAuthenticatedUser() {
-        return (User) SecurityContextHolder.getContext()
-                .getAuthentication().getPrincipal();
+        User user;
+        try {
+            user = (User) SecurityContextHolder.getContext()
+                    .getAuthentication().getPrincipal();
+        } catch (ClassCastException ex) {
+            user = new User("anonymousUser");
+        }
+        return user;
     }
 
     /**

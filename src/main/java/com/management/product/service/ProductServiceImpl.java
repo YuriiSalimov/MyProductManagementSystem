@@ -31,7 +31,6 @@ public class ProductServiceImpl extends DataServiceImpl<Product> implements Prod
      * @param repository a implementation of the {@link ProductRepository} interface.
      */
     @Autowired
-    @SuppressWarnings("SpringJavaAutowiringInspection")
     public ProductServiceImpl(final ProductRepository repository) {
         super(repository);
         this.repository = repository;
