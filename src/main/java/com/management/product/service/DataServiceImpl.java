@@ -1,11 +1,12 @@
 package com.management.product.service;
 
-import com.management.product.dao.DataDao;
 import com.management.product.entity.Model;
+import com.management.product.repository.DataRepository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * The class of the service layer, describes a set of methods
@@ -21,16 +22,16 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
      * The object provides a set of standard JPA methods
      * for working {@link Model} objects with the database.
      */
-    private final DataDao<T> dao;
+    private final DataRepository<T> repository;
 
     /**
      * Constructor.
      * Initializes a implementations of the interfaces.
      *
-     * @param dao a implementation of the {@link DataDao} interface.
+     * @param repository a implementation of the {@link DataRepository} interface.
      */
-    DataServiceImpl(final DataDao<T> dao) {
-        this.dao = dao;
+    DataServiceImpl(final DataRepository<T> repository) {
+        this.repository = repository;
     }
 
     /**
@@ -47,7 +48,7 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
         if (model == null) {
             throw new IllegalArgumentException("Input model is null!");
         }
-        return this.dao.add(model);
+        return this.repository.save(model);
     }
 
     /**
@@ -62,11 +63,7 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
     public Collection<T> addAll(final Collection<T> models) {
         final List<T> result = new ArrayList<>();
         if (models != null && !models.isEmpty()) {
-            result.addAll(
-                    models.stream()
-                            .map(this::add)
-                            .collect(Collectors.toList())
-            );
+            result.addAll(this.repository.save(models));
         }
         return result;
     }
@@ -81,13 +78,8 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
      */
     @Override
     @Transactional
-    public T update(final T model) throws IllegalArgumentException {
-        if (model == null) {
-            throw new IllegalArgumentException(
-                    "Input " + getClassSimpleName() + " is null!"
-            );
-        }
-        return this.dao.update(model);
+    public T update(final T model) {
+        return add(model);
     }
 
     /**
@@ -100,20 +92,12 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
     @Override
     @Transactional
     public Collection<T> update(final Collection<T> models) {
-        final List<T> result = new ArrayList<>();
-        if (models != null && !models.isEmpty()) {
-            result.addAll(
-                    models.stream()
-                            .map(this::update)
-                            .collect(Collectors.toList())
-            );
-        }
-        return result;
+        return addAll(models);
     }
 
     /**
      * Returns object of class {@link Model} or subclasses with parameter id.
-     * If id is {@code null} then throws IllegalArgumentException.
+     * If id is {@code null} then throws NullPointerException.
      *
      * @param id is id of object to return.
      * @return The model with parameter id.
@@ -122,7 +106,7 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
     @Override
     @Transactional(readOnly = true)
     public T get(final long id) throws NullPointerException {
-        final T model = this.dao.get(id);
+        final T model = this.repository.findOne(id);
         if (model == null) {
             throw new NullPointerException(
                     "Can`t find " + getClassSimpleName() +
@@ -140,7 +124,7 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
     @Override
     @Transactional
     public Collection<T> getAll() {
-        return this.dao.getAll();
+        return this.repository.findAll();
     }
 
     /**
@@ -152,7 +136,7 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
     @Override
     @Transactional
     public void remove(final long id) {
-        this.dao.remove(id);
+        this.repository.delete(id);
     }
 
     /**
@@ -165,7 +149,7 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
     @Transactional
     public void remove(final T model) {
         if (model != null) {
-            this.dao.remove(model);
+            this.repository.delete(model);
         }
     }
 
@@ -179,7 +163,7 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
     @Transactional
     public void remove(final Collection<T> models) {
         if (models != null && !models.isEmpty()) {
-            models.forEach(this::remove);
+            this.repository.delete(models);
         }
     }
 
@@ -189,7 +173,7 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
     @Override
     @Transactional
     public void removeAll() {
-        this.dao.removeAll();
+        this.repository.deleteAll();
     }
 
     /**
@@ -202,8 +186,8 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
      */
     @Override
     @Transactional(readOnly = true)
-    public boolean exists(final long id) {
-        return this.dao.exists(id);
+    public boolean exists(long id) {
+        return this.repository.exists(id);
     }
 
     /**

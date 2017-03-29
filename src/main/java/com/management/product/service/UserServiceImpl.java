@@ -1,8 +1,8 @@
 package com.management.product.service;
 
-import com.management.product.dao.UserDao;
 import com.management.product.entity.User;
 import com.management.product.enums.UserRole;
+import com.management.product.repository.UserRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -38,18 +38,18 @@ public class UserServiceImpl extends DataServiceImpl<User> implements UserServic
      * The interface provides a set of standard methods for working
      * {@link User} objects with the database.
      */
-    private final UserDao dao;
+    private final UserRepository repository;
 
     /**
      * Constructor.
      *
-     * @param dao a implementation of the {@link UserDao} interface.
+     * @param repository a implementation of the {@link UserRepository} interface.
      */
     @Autowired
     @SuppressWarnings("SpringJavaAutowiringInspection")
-    public UserServiceImpl(final UserDao dao) {
-        super(dao);
-        this.dao = dao;
+    public UserServiceImpl(final UserRepository repository) {
+        super(repository);
+        this.repository = repository;
     }
 
     /**
@@ -106,7 +106,7 @@ public class UserServiceImpl extends DataServiceImpl<User> implements UserServic
         if (isBlank(username)) {
             throw new IllegalArgumentException("Input name is blank!");
         }
-        final User user = this.dao.getByUsername(username);
+        final User user = this.repository.findByUsername(username);
         if (user == null) {
             throw new NullPointerException("Can`t find user by name \"" + username + "\"!");
         }
@@ -148,7 +148,7 @@ public class UserServiceImpl extends DataServiceImpl<User> implements UserServic
         if (role == null) {
             throw new IllegalArgumentException("Input user role is null!");
         }
-        return this.dao.getByUserRole(role);
+        return this.repository.findAllByRole(role);
     }
 
     /**
@@ -161,7 +161,7 @@ public class UserServiceImpl extends DataServiceImpl<User> implements UserServic
     @Transactional
     public void removeByUsername(final String username) {
         if (isNotBlank(username)) {
-            this.dao.removeByUsername(username);
+            this.repository.deleteByUsername(username);
         }
     }
 

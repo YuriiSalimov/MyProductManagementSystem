@@ -1,7 +1,7 @@
 package com.management.product.service;
 
-import com.management.product.dao.ProductDao;
 import com.management.product.entity.Product;
+import com.management.product.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
@@ -23,20 +23,20 @@ public class ProductServiceImpl extends DataServiceImpl<Product> implements Prod
 
     /**
      * The interface provides a set of standard methods
-     * for working {@link ProductDao} objects a the database.
+     * for working {@link Product} objects with the database.
      */
-    private final ProductDao dao;
+    private final ProductRepository repository;
 
     /**
      * Constructor.
      *
-     * @param dao a implementation of the {@link ProductDao} interface.
+     * @param repository a implementation of the {@link ProductRepository} interface.
      */
     @Autowired
     @SuppressWarnings("SpringJavaAutowiringInspection")
-    public ProductServiceImpl(final ProductDao dao) {
-        super(dao);
-        this.dao = dao;
+    public ProductServiceImpl(final ProductRepository repository) {
+        super(repository);
+        this.repository = repository;
     }
 
     /**
@@ -54,7 +54,7 @@ public class ProductServiceImpl extends DataServiceImpl<Product> implements Prod
         if (isBlank(title)) {
             throw new IllegalArgumentException("Input title is blank!");
         }
-        final Product product = this.dao.getByTitle(title);
+        final Product product = this.repository.findByTitle(title);
         if (product == null) {
             throw new NullPointerException("Can`t find product by title \"" + title + "\"!");
         }
@@ -71,7 +71,7 @@ public class ProductServiceImpl extends DataServiceImpl<Product> implements Prod
     @Transactional
     public void removeByTitle(String title) {
         if (isNotBlank(title)) {
-            this.dao.removeByTitle(title);
+            this.repository.deleteByTitle(title);
         }
     }
 
