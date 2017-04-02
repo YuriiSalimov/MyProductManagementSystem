@@ -4,9 +4,7 @@ import com.management.product.entity.Model;
 import com.management.product.repository.DataRepository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 /**
  * The class of the service layer, describes a set of methods
@@ -61,11 +59,7 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
     @Override
     @Transactional
     public Collection<T> addAll(final Collection<T> models) {
-        final List<T> result = new ArrayList<>();
-        if (models != null && !models.isEmpty()) {
-            result.addAll(this.repository.save(models));
-        }
-        return result;
+        return this.repository.save(models);
     }
 
     /**
