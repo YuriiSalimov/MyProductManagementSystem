@@ -31,8 +31,10 @@ public interface UserService extends DataService<User>, UserDetailsService {
     User getAuthenticatedUser();
 
     /**
+     * Check if authenticated user is admin.
      *
-     * @return
+     * @return {@code true} if authenticated user is admin,
+     * {@code false} otherwise.
      */
     boolean isAuthenticatedAdmin();
 
