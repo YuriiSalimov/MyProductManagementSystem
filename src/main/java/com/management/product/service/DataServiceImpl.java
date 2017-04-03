@@ -59,6 +59,9 @@ public abstract class DataServiceImpl<T extends Model> implements DataService<T>
     @Override
     @Transactional
     public Collection<T> addAll(final Collection<T> models) {
+        if ((models == null) || (models.isEmpty())) {
+            throw new IllegalArgumentException("Input model is null!");
+        }
         return this.repository.save(models);
     }
 
