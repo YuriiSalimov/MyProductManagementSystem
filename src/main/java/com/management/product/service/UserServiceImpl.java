@@ -38,6 +38,7 @@ public class UserServiceImpl extends DataServiceImpl<User> implements UserServic
      * @param repository a implementation of the {@link UserRepository} interface.
      */
     @Autowired
+    @SuppressWarnings("SpringJavaAutowiringInspection")
     public UserServiceImpl(final UserRepository repository) {
         super(repository);
         this.repository = repository;
@@ -62,8 +63,10 @@ public class UserServiceImpl extends DataServiceImpl<User> implements UserServic
     }
 
     /**
+     * Check if authenticated user is admin.
      *
-     * @return
+     * @return {@code true} if authenticated user is admin,
+     * {@code false} otherwise.
      */
     @Override
     @Transactional(readOnly = true)
