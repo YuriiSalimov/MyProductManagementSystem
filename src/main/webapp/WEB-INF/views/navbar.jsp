@@ -1,10 +1,12 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <nav class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
-            <h3><a href="<c:url value="/home"/>">Product Management System</a></h3>
+            <h3>
+                <a href="<c:url value="/home"/>">Product Management System</a>
+            </h3>
         </div>
         <div>
             <ul class="nav navbar-nav navbar-right">

@@ -1,6 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -14,10 +13,14 @@
     <h4>Login</h4>
     <c:choose>
         <c:when test="${param.error ne null}">
-            <div role="alert"><h5>Error</h5></div>
+            <div role="alert">
+                <h5>Error</h5>
+            </div>
         </c:when>
         <c:when test="${param.logout ne null}">
-            <div role="alert"><h5>Logout</h5></div>
+            <div role="alert">
+                <h5>Logout</h5>
+            </div>
         </c:when>
     </c:choose>
     <form action="<c:url value="/login"/>" method="post">
