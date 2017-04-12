@@ -12,29 +12,33 @@
     <body>
     <jsp:include page="/WEB-INF/views/navbar.jsp"/>
     <div class="container">
-        <form role="form" class="form-horizontal" action="<c:url value="/admin/user/add"/>" method="post">
+        <form role="form" class="form-horizontal" action="<c:url value="/user/add"/>" method="post">
             <div class="form-group">
                 <input type="text" class="form-control" name="username" placeholder="Username">
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" name="password" placeholder="Password">
             </div>
-            <div class="form-group">
-                <c:forEach items="${roles}" var="role">
+            <c:if test="${is_admin}">
+                <div class="form-group">
+                    <c:forEach items="${roles}" var="role">
+                        <label>
+                            <input type="radio" name="role" value="<c:out value="${role}"/>" checked required/>
+                            <c:out value="${role}"/>
+                        </label>
+                        &nbsp;&nbsp;
+                    </c:forEach>
+                </div>
+                <div class="form-group">
                     <label>
-                        <input type="radio" name="role" value="<c:out value="${role}"/>" checked required/>
-                        <c:out value="${role}"/>
+                        <input type="radio" name="locked" value="true" required/> Locked
                     </label>
-                </c:forEach>
-            </div>
-            <div class="form-group">
-                <label>
-                    <input type="radio" name="locked" value="true" required/> Locked
-                </label>
-                <label>
-                    <input type="radio" name="locked" value="false" checked required/> Not Locked
-                </label>
-            </div>
+                    &nbsp;&nbsp;
+                    <label>
+                        <input type="radio" name="locked" value="false" checked required/> Not Locked
+                    </label>
+                </div>
+            </c:if>
             <div class="form-group">
                 <input type="submit" class="btn btn-default" value="Add">
             </div>

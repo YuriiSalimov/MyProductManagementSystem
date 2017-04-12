@@ -21,7 +21,6 @@ import org.springframework.web.servlet.ModelAndView;
  * @version 1.0
  */
 @Controller
-@RequestMapping(value = "/admin/user")
 @ComponentScan(basePackages = "com.management.product.service")
 public class UserController {
 
@@ -49,13 +48,13 @@ public class UserController {
      * @return The ready object of class ModelAndView.
      */
     @RequestMapping(
-            value = "/new",
+            value = "/user/new",
             method = RequestMethod.GET
     )
     public ModelAndView getNewUserPage() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("roles", UserRole.values());
-        modelAndView.addObject("is_admin", true);
+        modelAndView.addObject("is_admin", this.userService.isAuthenticatedAdmin());
         modelAndView.setViewName("add_user");
         return modelAndView;
     }
@@ -72,7 +71,7 @@ public class UserController {
      * @return The view name.
      */
     @RequestMapping(
-            value = "/add",
+            value = "/user/add",
             method = RequestMethod.POST
     )
     public String addNewUser(
@@ -96,7 +95,7 @@ public class UserController {
      * @return The ready object of class ModelAndView.
      */
     @RequestMapping(
-            value = "/edit/{id}",
+            value = "/admin/user/edit/{id}",
             method = RequestMethod.GET
     )
     public ModelAndView getPageForUpdatingUser(@PathVariable("id") final long id) {
@@ -122,7 +121,7 @@ public class UserController {
      * @return The view name.
      */
     @RequestMapping(
-            value = "/update/{id}",
+            value = "/admin/user/update/{id}",
             method = RequestMethod.POST
     )
     public String updateUser(
@@ -150,7 +149,7 @@ public class UserController {
      * @return The view name.
      */
     @RequestMapping(
-            value = "/delete/{id}",
+            value = "/admin/user/delete/{id}",
             method = RequestMethod.GET
     )
     public String deleteUser(@PathVariable("id") final long id) {
@@ -166,7 +165,7 @@ public class UserController {
      * @return The view name.
      */
     @RequestMapping(
-            value = "/delete/all",
+            value = "/admin/user/delete/all",
             method = RequestMethod.GET
     )
     public String deleteAllUsers() {

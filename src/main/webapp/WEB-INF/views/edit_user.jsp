@@ -29,6 +29,7 @@
                                <c:if test="${role eq user.role}">checked</c:if>/>
                         <c:out value="${role}"/>
                     </label>
+                    &nbsp;&nbsp;
                 </c:forEach>
             </div>
             <div class="form-group">
@@ -36,6 +37,7 @@
                     <input type="radio" name="locked" value="true" required
                            <c:if test="${user.locked}">checked</c:if>/> Locked
                 </label>
+                &nbsp;&nbsp;
                 <label>
                     <input type="radio" name="locked" value="false" required
                            <c:if test="${!user.locked}">checked</c:if>/> Not Locked

@@ -17,6 +17,7 @@
             <a href="<c:url value="/admin/user/new"/>">
                 <input type="submit" class="btn btn-default" value="Add New">
             </a>
+            &nbsp;&nbsp;
             <a href="<c:url value="/admin/user/delete/all"/>">
                 <input type="submit" class="btn btn-default" value="Delete All">
             </a>
@@ -37,6 +38,7 @@
                             <a href="<c:url value="/admin/user/delete/${user.id}"/>">
                                 <input type="submit" class="btn btn-default" value="Delete">
                             </a>
+                            &nbsp;&nbsp;
                             <a href="<c:url value="/admin/user/edit/${user.id}"/>">
                                 <input type="submit" class="btn btn-default" value="Edit">
                             </a>

@@ -36,6 +36,10 @@
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-default" value="Submit">
+                &nbsp;&nbsp;
+                <a href="<c:url value="/user/new"/>">
+                    <input type="button" class="btn btn-default" value="Registration">
+                </a>
             </div>
         </form>
     </div>

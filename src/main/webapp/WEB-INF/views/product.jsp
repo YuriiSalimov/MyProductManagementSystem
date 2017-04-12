@@ -34,6 +34,7 @@
             <a href="<c:url value="/admin/product/delete/${product.id}"/>">
                 <input type="submit" class="btn btn-default" value="Delete">
             </a>
+            &nbsp;&nbsp;
             <a href="<c:url value="/admin/product/edit/${product.id}"/>">
                 <input type="submit" class="btn btn-default" value="Edit">
             </a>
