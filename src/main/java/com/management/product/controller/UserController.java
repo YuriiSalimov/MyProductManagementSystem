@@ -78,7 +78,7 @@ public class UserController {
     public String addNewUser(
             @RequestParam(value = "username", defaultValue = "") final String username,
             @RequestParam(value = "password", defaultValue = "") final String password,
-            @RequestParam(value = "role", defaultValue = "CLIENT") final UserRole role,
+            @RequestParam(value = "role", defaultValue = "USER") final UserRole role,
             @RequestParam(value = "locked", defaultValue = "false") final boolean locked
     ) {
         User user = new User(username, password, role);
